@@ -204,3 +204,49 @@ footer{min-height:300px!important;padding:66px 24px 38px!important}
 .pdf-credit{margin-top:20px!important}
 .pdf-mini-brand{border-radius:10px!important}
 @media(max-width:390px){footer{min-height:280px!important;padding-top:58px!important}.footer-magic strong{font-size:27px!important}.footer-aurora{font-size:43px!important}}
+
+/* V7 — aplicação do layout solicitado: cores sólidas, sem brilho */
+.footer-magic strong{
+  font-size:34px!important;
+  line-height:1.06!important;
+  font-weight:1000!important;
+  letter-spacing:-.8px!important;
+}
+.footer-magic strong span{
+  background:none!important;
+  -webkit-background-clip:initial!important;
+  background-clip:initial!important;
+  -webkit-text-stroke:0!important;
+  filter:none!important;
+  text-shadow:0 2px 0 rgba(255,255,255,.75)!important;
+  animation:none!important;
+}
+.footer-magic strong span:first-child{color:#8b4fd6!important}
+.footer-magic strong span:last-child{color:#efb62f!important}
+.footer-magic small{
+  color:#7650b5!important;
+  text-shadow:none!important;
+  font-weight:1000!important;
+}
+.footer-aurora{
+  color:#8d48d7!important;
+  background:none!important;
+  -webkit-background-clip:initial!important;
+  background-clip:initial!important;
+  font-size:58px!important;
+  font-weight:1000!important;
+  letter-spacing:-2px!important;
+  filter:none!important;
+  text-shadow:0 3px 0 #fff,0 7px 0 rgba(104,62,151,.12)!important;
+  animation:auroraGentleFloat 3.2s ease-in-out infinite!important;
+}
+@keyframes auroraGentleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.magic-star{filter:none!important;color:#ffd34d!important}
+@media(max-width:600px){
+ .footer-magic strong{font-size:30px!important}
+ .footer-aurora{font-size:53px!important}
+}
+@media(max-width:390px){
+ .footer-magic strong{font-size:27px!important}
+ .footer-aurora{font-size:48px!important}
+}
