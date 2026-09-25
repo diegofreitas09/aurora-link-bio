@@ -184,3 +184,9 @@ footer{min-height:390px;padding:78px 22px 38px;display:flex;align-items:center;j
 .location-card:active{transform:scale(.985)}.location-icon{font-size:44px;filter:drop-shadow(0 5px 6px rgba(50,80,100,.15))}
 .location-copy{display:flex;flex-direction:column;min-width:0}.location-copy b{font-size:22px;font-weight:1000;background:linear-gradient(90deg,#e85f7f,#7d58c7,#3c9bd3,#50a66e);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:auroraTitleFlow 7s ease-in-out infinite}.location-copy small{font-size:14px;margin-top:3px;color:#315b7c}.location-copy em{font-size:12px;margin-top:4px;font-style:normal;font-weight:800;color:#3f789b}
 @media(max-width:600px){.location-card{padding:17px 18px;border-radius:25px}.location-icon{font-size:38px}.location-copy b{font-size:20px}}
+
+/* Card Como chegar */
+.location-card{background:linear-gradient(135deg,#eaf8ec 0%,#e7f5ff 52%,#fff4cf 100%)!important}
+.location-pin{position:absolute;left:22px;top:50%;transform:translateY(-50%);font-style:normal;font-size:44px;filter:drop-shadow(0 5px 6px rgba(44,94,110,.14))}
+.location-card em{color:#397c69!important}
+@media(max-width:600px){.location-pin{left:20px;font-size:40px}}
