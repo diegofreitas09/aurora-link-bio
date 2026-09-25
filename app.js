@@ -1,1 +1,1 @@
-document.querySelectorAll('.card').forEach(card=>{card.addEventListener('pointerdown',()=>card.classList.add('tap'));card.addEventListener('pointerup',()=>card.classList.remove('tap'))});
+document.querySelectorAll('a.tile,.enroll').forEach(el=>{el.addEventListener('pointerdown',()=>el.style.transform='scale(.96)');el.addEventListener('pointerup',()=>el.style.transform='');el.addEventListener('pointercancel',()=>el.style.transform='')});
