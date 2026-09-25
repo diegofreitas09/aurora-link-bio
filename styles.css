@@ -102,3 +102,34 @@ footer{margin-top:42px}
 @media(prefers-reduced-motion:reduce){
  .tile b,.welcome-copy b,.brand h2{animation:none!important;background-position:50% 50%}
 }
+
+/* V4 — rodapé mobile: conteúdo protegido dos elementos decorativos */
+footer{
+  position:relative;
+  min-height:300px;
+  padding:108px 110px 58px 24px;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+footer strong,footer small{position:relative;z-index:4;display:block;max-width:340px}
+footer strong{line-height:1.12}
+footer small{margin-top:14px;line-height:1.3}
+footer .hill{z-index:1;pointer-events:none}
+footer .star,footer .heart,footer .blocks{z-index:2;pointer-events:none}
+footer .heart{right:22px;top:22px}
+footer .star{left:26px;top:18px}
+footer .blocks{right:18px;bottom:12px}
+@media(max-width:600px){
+ footer{min-height:300px;margin-top:34px;padding:106px 112px 60px 24px}
+ footer strong{font-size:28px;max-width:330px}
+ footer small{font-size:14px;max-width:300px}
+ footer .heart{right:20px;top:18px;transform:scale(.82)}
+ footer .star{left:22px;top:14px;transform:scale(.78)}
+ footer .blocks{right:14px;bottom:10px;transform:scale(.86);transform-origin:right bottom}
+}
+@media(max-width:390px){
+ footer{padding-left:20px;padding-right:96px}
+ footer strong{font-size:25px}
+ footer .heart{right:10px;transform:scale(.72)}
+ footer .blocks{right:8px;transform:scale(.76);transform-origin:right bottom}
+}
