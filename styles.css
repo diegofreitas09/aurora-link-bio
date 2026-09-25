@@ -142,3 +142,8 @@ footer .blocks{right:18px;bottom:12px}
 .copyright{text-align:center;padding:18px 12px 28px;font-size:11px;color:#8094a5;font-weight:700}
 @media(max-width:600px){.pdf-credit{width:calc(100% - 28px);grid-template-columns:52px 72px 1fr;gap:9px;padding:13px 12px;border-radius:21px}.pdf-mark{width:50px;height:50px;border-radius:14px;font-size:36px}.pdf-brand b{font-size:17px}.pdf-brand small{font-size:6px}.pdf-info{padding-left:10px}.pdf-info span{font-size:10px}.pdf-info strong{font-size:12.5px}.pdf-info em{font-size:10.5px}.copyright{font-size:10px;padding-bottom:24px}}
 @media(max-width:390px){.pdf-credit{grid-template-columns:46px 1fr;padding:12px}.pdf-mark{width:44px;height:44px;font-size:32px}.pdf-brand{display:none}.pdf-info{border-left:0;padding-left:2px}.pdf-info strong{font-size:12px}}
+
+/* Logo Assessoria PDF Financeira no fechamento */
+.pdf-financeira-logo{width:min(78%,390px);margin:28px auto 4px;padding:10px;background:#fff;border-radius:30px;box-shadow:0 14px 34px rgba(62,82,112,.14);box-sizing:border-box;overflow:hidden}
+.pdf-financeira-logo img{display:block;width:100%;height:auto;border-radius:22px;object-fit:cover}
+@media(max-width:600px){.pdf-financeira-logo{width:min(74%,340px);margin-top:24px;border-radius:26px;padding:8px}.pdf-financeira-logo img{border-radius:20px}}
