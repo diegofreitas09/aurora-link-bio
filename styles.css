@@ -69,3 +69,36 @@ footer{margin-top:42px}
 @media(max-width:600px){.aurora-mascot{width:112px;height:138px}.mascot-stage{height:142px}}
 @media(max-width:390px){.aurora-mascot{width:100px;height:126px}.mascot-stage{height:132px}}
 @media(prefers-reduced-motion:reduce){.aurora-mascot{animation:none!important}}
+
+/* Títulos Aurora: destaque multicolorido animado */
+.tile b{
+  font-weight:900;
+  letter-spacing:-.2px;
+  background:linear-gradient(90deg,#477bb8,#7655a8,#d77b92,#d9a23b,#55a67a,#477bb8);
+  background-size:260% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:auroraTitleFlow 7s ease-in-out infinite;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.75));
+}
+.welcome-copy b,.brand h2{
+  font-weight:900;
+  background:linear-gradient(90deg,#356fae,#7955aa,#d57891,#d19a3b,#4f9e78,#356fae);
+  background-size:260% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:auroraTitleFlow 8s ease-in-out infinite;
+}
+@keyframes auroraTitleFlow{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+@media(max-width:600px){
+ .tile b{font-size:18px;line-height:1.15}
+ .welcome-copy b{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){
+ .tile b,.welcome-copy b,.brand h2{animation:none!important;background-position:50% 50%}
+}
