@@ -24,3 +24,11 @@
  .enroll strong{font-size:17px}.welcome p{font-size:11px}
  footer{margin-left:-10px;margin-right:-10px}
 }
+
+/* Ícone escolar universal: trio de lápis coloridos */
+.pencils{position:relative!important;width:52px;height:52px;display:block!important;filter:none!important}
+.pencils span{position:absolute;font-style:normal;font-size:32px;transform-origin:center}
+.pencils span:nth-child(1){left:2px;top:11px;transform:rotate(-42deg);filter:hue-rotate(0deg) saturate(1.25)}
+.pencils span:nth-child(2){left:12px;top:5px;transform:rotate(-12deg);filter:hue-rotate(85deg) saturate(1.35)}
+.pencils span:nth-child(3){left:21px;top:10px;transform:rotate(25deg);filter:hue-rotate(190deg) saturate(1.35)}
+@media(max-width:600px){.tile .pencils{position:absolute!important;left:14px!important;top:50%!important;transform:translateY(-50%)!important}}
