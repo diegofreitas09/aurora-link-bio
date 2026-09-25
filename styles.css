@@ -190,3 +190,17 @@ footer{min-height:390px;padding:78px 22px 38px;display:flex;align-items:center;j
 .location-pin{position:absolute;left:22px;top:50%;transform:translateY(-50%);font-style:normal;font-size:44px;filter:drop-shadow(0 5px 6px rgba(44,94,110,.14))}
 .location-card em{color:#397c69!important}
 @media(max-width:600px){.location-pin{left:20px;font-size:40px}}
+
+/* V6 — correção visual: localização e fechamento */
+.location-card{min-height:108px!important;text-align:left!important;padding:18px 18px 18px 86px!important;background:linear-gradient(135deg,#e9f7f1,#eef5ff 55%,#fff5d8)!important}
+.location-card .location-pin{left:24px!important;top:50%!important;font-size:40px!important}
+.location-card b{font-size:20px!important}.location-card small{font-size:13px!important;margin-top:3px!important}.location-card em{font-size:12px!important;margin-top:5px!important}
+
+footer{min-height:300px!important;padding:66px 24px 38px!important}
+.footer-magic strong{font-size:31px!important;line-height:1.08!important;margin-bottom:14px!important}
+.footer-magic strong span{-webkit-text-stroke:0!important;filter:drop-shadow(0 2px 0 rgba(255,255,255,.85)) drop-shadow(0 4px 5px rgba(45,103,79,.13))!important}
+.footer-magic small{font-size:10px!important;letter-spacing:1.7px!important}
+.footer-aurora{font-size:48px!important;filter:drop-shadow(0 2px 0 #fff) drop-shadow(0 5px 6px rgba(55,89,120,.13))!important}
+.pdf-credit{margin-top:20px!important}
+.pdf-mini-brand{border-radius:10px!important}
+@media(max-width:390px){footer{min-height:280px!important;padding-top:58px!important}.footer-magic strong{font-size:27px!important}.footer-aurora{font-size:43px!important}}
