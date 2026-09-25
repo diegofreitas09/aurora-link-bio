@@ -32,3 +32,32 @@
 .pencils span:nth-child(2){left:12px;top:5px;transform:rotate(-12deg);filter:hue-rotate(85deg) saturate(1.35)}
 .pencils span:nth-child(3){left:21px;top:10px;transform:rotate(25deg);filter:hue-rotate(190deg) saturate(1.35)}
 @media(max-width:600px){.tile .pencils{position:absolute!important;left:14px!important;top:50%!important;transform:translateY(-50%)!important}}
+
+/* V3 — composição mobile inspirada na organização do Link Bio Majestic */
+.page{max-width:620px;padding-left:22px;padding-right:22px}
+.brand{padding-top:8px;margin-bottom:28px}
+.welcome{position:relative;min-height:152px;margin:0 0 28px;padding:24px 24px 24px 150px;border-radius:34px;overflow:visible}
+.mascot-stage{position:absolute;left:18px;bottom:0;width:118px;height:145px;display:flex;align-items:flex-end;justify-content:center}
+.mascot-placeholder{width:108px;height:108px;border-radius:50%;background:linear-gradient(145deg,#fff7d8,#e7f5ff);border:5px solid #fff;box-shadow:0 10px 24px #547ca82b;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:bob 3s ease-in-out infinite}
+.mascot-placeholder span{font-size:45px}.mascot-placeholder b{font-size:13px;color:#4b4b8e}
+.welcome-copy{min-width:0}.welcome-copy .hello{display:block;font-size:11px;font-weight:900;letter-spacing:1.6px;color:#7c5ab8;margin-bottom:4px}
+.welcome-copy b{font-size:20px;line-height:1.15}.welcome-copy p{line-height:1.45;margin:8px 0 0}
+.enroll{margin:0 0 30px;min-height:100px}
+.grid{gap:18px}.tile{min-height:132px}
+footer{margin-top:42px}
+@media(max-width:600px){
+ .page{padding:18px 18px 0}.brand{margin-bottom:24px}
+ .welcome{min-height:142px;margin-bottom:24px;padding:20px 16px 20px 126px;border-radius:30px}
+ .mascot-stage{left:8px;width:112px;height:135px}.mascot-placeholder{width:98px;height:98px}
+ .welcome-copy b{font-size:18px}.welcome-copy p{font-size:12px;line-height:1.4}
+ .enroll{margin-bottom:26px;min-height:88px}
+ .grid{gap:16px}
+ .tile{min-height:108px;padding:15px 16px 15px 82px}
+ footer{margin-top:34px;padding-bottom:34px}.blocks{bottom:5px}
+}
+@media(max-width:390px){
+ .page{padding-left:14px;padding-right:14px}
+ .welcome{padding-left:112px;min-height:136px}.mascot-stage{width:98px}.mascot-placeholder{width:88px;height:88px}
+ .welcome-copy b{font-size:16px}.welcome-copy p{font-size:11.5px}
+ .tile{padding-left:76px}
+}
