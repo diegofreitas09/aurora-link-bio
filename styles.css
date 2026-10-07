@@ -583,3 +583,34 @@ body{background:#fff;color:var(--ink)}
     bottom:76px;
   }
 }
+
+/* Ajuste visual final da home */
+.hero h1{color:#0047AB!important}
+.hero h1 span{
+  background:linear-gradient(90deg,#8f73da,#6faee9,#66c9c1,#a9cf73,#f2c34f,#f0a254)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+}
+
+/* Mascotes do WhatsApp: menores e fora do card da fachada */
+.aurora-whatsapp-mascot{
+  width:92px!important;
+  right:16px!important;
+  bottom:18px!important;
+  z-index:80!important;
+  filter:drop-shadow(0 10px 16px rgba(47,43,68,.18))!important;
+}
+.aurora-whatsapp-mascot img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+@media(max-width:768px){
+  .aurora-whatsapp-mascot{
+    width:78px!important;
+    right:8px!important;
+    bottom:78px!important;
+  }
+}
