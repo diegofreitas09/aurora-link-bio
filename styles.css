@@ -1265,3 +1265,175 @@ body{background:#fff;color:var(--ink)}
     min-height:auto!important;
   }
 }
+
+
+/* =========================================================
+   AJUSTE DAS DUAS FOTOS — ESCOLA + FAMÍLIA E MURAL
+   ========================================================= */
+
+/* Escola + Família */
+.family-photo-card{
+  width:min(100%,460px)!important;
+  border-radius:36px!important;
+  border:6px solid rgba(255,255,255,.92)!important;
+  box-shadow:0 24px 58px rgba(73,83,120,.16)!important;
+  transform:none!important;
+  background:#fff!important;
+}
+.family-photo-card img{
+  width:100%!important;
+  aspect-ratio:4/3!important;
+  object-fit:cover!important;
+  object-position:center 44%!important;
+  filter:saturate(1.04) contrast(1.025) brightness(1.025)!important;
+}
+.family-photo-card::after{
+  background:linear-gradient(180deg,transparent 53%,rgba(24,35,62,.62) 100%)!important;
+}
+.family-photo-card figcaption{
+  left:20px!important;
+  right:20px!important;
+  bottom:18px!important;
+  gap:9px!important;
+}
+.family-photo-card figcaption strong{
+  font-size:23px!important;
+  line-height:1.08!important;
+}
+.family-photo-card figcaption span{
+  font-size:26px!important;
+}
+.family-visual{
+  min-height:365px!important;
+  padding:10px 0!important;
+}
+
+/* Mural — foto real no lugar do oval */
+.mural-hero-photo{
+  position:relative;
+  margin:0;
+  width:100%;
+  min-height:350px;
+  border-radius:42px;
+  overflow:hidden;
+  background:#fff;
+  border:7px solid rgba(255,255,255,.9);
+  box-shadow:0 28px 68px rgba(74,82,117,.18);
+  transform:rotate(1deg);
+}
+.mural-hero-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,transparent 48%,rgba(26,38,64,.68) 100%);
+}
+.mural-hero-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:350px;
+  object-fit:cover;
+  object-position:center 40%;
+  filter:saturate(1.05) contrast(1.03) brightness(1.02);
+}
+.mural-hero-photo figcaption{
+  position:absolute;
+  z-index:2;
+  left:26px;
+  right:26px;
+  bottom:24px;
+  display:flex;
+  align-items:center;
+  gap:13px;
+  color:#fff;
+  text-shadow:0 2px 14px rgba(0,0,0,.28);
+}
+.mural-photo-icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  flex:0 0 48px;
+  border-radius:16px;
+  background:rgba(255,255,255,.9);
+  text-shadow:none;
+  font-size:26px;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+.mural-hero-photo figcaption div{
+  display:grid;
+  gap:3px;
+}
+.mural-hero-photo figcaption strong{
+  font:800 31px/1 "Baloo 2",sans-serif;
+}
+.mural-hero-photo figcaption small{
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+
+/* Ajusta proporção das duas colunas para as fotos respirarem melhor */
+.family-panel{
+  grid-template-columns:1.05fr .95fr!important;
+  gap:54px!important;
+}
+.mural-hero-shell{
+  grid-template-columns:1.08fr .92fr!important;
+  gap:58px!important;
+}
+
+@media(max-width:900px){
+  .family-photo-card{
+    width:min(100%,540px)!important;
+  }
+  .family-panel,
+  .mural-hero-shell{
+    grid-template-columns:1fr!important;
+    gap:34px!important;
+  }
+  .family-visual{
+    min-height:auto!important;
+  }
+  .mural-hero-photo{
+    min-height:300px;
+    transform:none;
+  }
+  .mural-hero-photo img{
+    min-height:300px;
+  }
+}
+
+@media(max-width:600px){
+  .family-photo-card{
+    border-radius:28px!important;
+    border-width:5px!important;
+  }
+  .family-photo-card figcaption strong{
+    font-size:19px!important;
+  }
+  .mural-hero-photo{
+    border-radius:30px;
+    min-height:260px;
+    border-width:5px;
+  }
+  .mural-hero-photo img{
+    min-height:260px;
+  }
+  .mural-hero-photo figcaption{
+    left:16px;
+    right:16px;
+    bottom:16px;
+  }
+  .mural-hero-photo figcaption strong{
+    font-size:24px;
+  }
+  .mural-photo-icon{
+    width:42px;
+    height:42px;
+    flex-basis:42px;
+    border-radius:13px;
+    font-size:22px;
+  }
+}
