@@ -8,3 +8,15 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+
+[[redirects]]
+  from = "/bio"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "https://aurora-link-bio.netlify.app/*"
+  to = "https://crecheescolaaurora.com.br/:splat"
+  status = 301
+  force = true
