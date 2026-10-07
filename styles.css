@@ -695,3 +695,54 @@ body{background:#fff;color:var(--ink)}
     bottom:78px!important;
   }
 }
+
+/* Identidade mais colorida — substitui textos escuros por cores da Aurora */
+:root{--ink:#0754b8}
+
+/* Títulos principais coloridos e chamativos */
+.section h2,
+.page-hero h1,
+.history-heading h2,
+.cta h2,
+.detail-hero h1{
+  background:linear-gradient(90deg,#0754b8 0%,#6f72dc 24%,#48bfc7 46%,#7fbd68 65%,#efbd38 82%,#ef884b 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent!important;
+}
+
+/* Títulos dos cards em cores alternadas da marca */
+.value-card h3:nth-of-type(1),
+.experience-card h3,
+.detail-card h3,
+.structure-card h3,
+.program-card h3,
+.contact-card h3,
+.mural-card h3{color:#0754b8}
+
+.value-card:nth-child(3n+2) h3,
+.experience-card:nth-child(3n+2) h3,
+.detail-card:nth-child(3n+2) h3,
+.structure-card:nth-child(3n+2) h3,
+.program-card:nth-child(3n+2) h3{color:#7b5bc7}
+
+.value-card:nth-child(3n) h3,
+.experience-card:nth-child(3n) h3,
+.detail-card:nth-child(3n) h3,
+.structure-card:nth-child(3n) h3,
+.program-card:nth-child(3n) h3{color:#169c91}
+
+/* Textos antes escuros: azul vivo em vez de preto */
+.button-soft,
+.hero-tags span,
+.history-chip strong,
+.history-story p strong,
+.hero-facade-caption strong,
+.footer-links strong{
+  color:#0754b8!important;
+}
+
+/* Destaques alternados */
+.history-chip:nth-child(2) strong{color:#d28a13!important}
+.history-chip:nth-child(3) strong{color:#168ba4!important}
+.history-chip:nth-child(4) strong{color:#6a54bd!important}
