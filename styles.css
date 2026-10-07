@@ -1162,3 +1162,34 @@ body{background:#fff;color:var(--ink)}
     cursor:url("assets/cursor-sol.svg") 16 16, pointer!important;
   }
 }
+
+
+/* Localização da fachada clicável */
+.hero-facade-badge{
+  text-decoration:none!important;
+  cursor:pointer!important;
+  transition:transform .2s ease,box-shadow .2s ease!important;
+}
+.hero-facade-badge:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:0 10px 24px rgba(41,54,92,.14)!important;
+}
+.hero-structure-link{
+  color:#8a63d2!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+.hero-structure-link:hover{
+  text-decoration:underline!important;
+}
+.hero-location-tag{
+  display:inline-flex!important;
+  align-items:center!important;
+  text-decoration:none!important;
+  color:#0754b8!important;
+  font-weight:800!important;
+}
+.hero-location-tag:hover{
+  transform:translateY(-1px);
+}
