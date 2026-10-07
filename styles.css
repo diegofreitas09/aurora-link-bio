@@ -461,3 +461,43 @@ body{background:#fff;color:var(--ink)}
 @media(max-width:420px){
   .mural-home-card.featured{min-height:345px}
 }
+
+
+/* História da Aurora */
+.history-section{padding:105px 24px;background:linear-gradient(180deg,#fff 0%,#faf7fd 48%,#f4fbfa 100%)}
+.history-shell{max-width:1200px;margin:auto}
+.history-heading{max-width:920px}
+.history-heading h2{font:800 clamp(42px,5.4vw,68px)/1.02 "Baloo 2",sans-serif;letter-spacing:-.04em;margin:14px 0 18px;color:var(--ink)}
+.history-lead{margin:0;max-width:900px;color:var(--muted);font-size:20px;line-height:1.75;font-weight:700}
+.history-lead strong{color:var(--lilac-strong)}
+.history-layout{display:grid;grid-template-columns:300px 1fr;gap:58px;align-items:start;margin-top:52px}
+.history-highlights{display:grid;gap:14px;position:sticky;top:105px}
+.history-chip{display:grid;grid-template-columns:66px 1fr;gap:14px;align-items:center;padding:18px;border-radius:24px;background:#fff;border:1px solid rgba(143,115,200,.14);box-shadow:0 12px 32px rgba(76,78,102,.06)}
+.history-chip>span{width:66px;height:66px;border-radius:20px;display:grid;place-items:center;background:var(--lilac-soft);color:var(--lilac-strong);font:800 25px/1 "Baloo 2",sans-serif}
+.history-chip:nth-child(2)>span{background:var(--yellow-soft);color:#9a7823}
+.history-chip:nth-child(3)>span{background:var(--blue-soft);color:#4a86a6}
+.history-chip:nth-child(4)>span{background:var(--aqua-soft);color:#3d8b80}
+.history-chip p{display:grid;gap:3px;margin:0}
+.history-chip strong{font:800 16px/1.05 "Baloo 2",sans-serif;color:var(--ink)}
+.history-chip small{color:var(--muted);font-size:10px;line-height:1.35;font-weight:800}
+.history-story{padding:40px 44px;border-radius:34px;background:#fff;border:1px solid #ece9f2;box-shadow:0 22px 60px rgba(75,72,103,.08)}
+.history-story p{margin:0 0 22px;color:#626a7e;font-size:16.5px;line-height:1.88;font-weight:650}
+.history-story p strong{color:#4e536b}
+.history-story blockquote{margin:32px 0 25px;padding:28px 30px;border:0;border-left:5px solid var(--lilac);border-radius:0 24px 24px 0;background:linear-gradient(135deg,var(--lilac-soft),#fff);color:#555b72;font:800 22px/1.55 "Baloo 2",sans-serif}
+.history-signature{display:grid;gap:2px;padding-top:8px}
+.history-signature strong{font:800 25px/1 "Baloo 2",sans-serif;color:var(--lilac-strong)}
+.history-signature span{color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:900px){
+  .history-layout{grid-template-columns:1fr;gap:30px}
+  .history-highlights{position:static;grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .history-section{padding:76px 18px}
+  .history-heading h2{font-size:44px}
+  .history-lead{font-size:17px;line-height:1.7}
+  .history-layout{margin-top:34px}
+  .history-highlights{grid-template-columns:1fr}
+  .history-story{padding:28px 24px;border-radius:28px}
+  .history-story p{font-size:15.5px;line-height:1.82}
+  .history-story blockquote{padding:22px 22px;font-size:19px}
+}
