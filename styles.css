@@ -905,3 +905,216 @@ body{background:#fff;color:var(--ink)}
     bottom:76px!important;
   }
 }
+
+
+/* =========================================================
+   RODAPÉ INSTITUCIONAL — AURORA + PDF SOLUÇÃO EDUCACIONAL
+   ========================================================= */
+.site-footer{
+  position:relative!important;
+  margin-top:0!important;
+  padding:42px 24px 18px!important;
+  background:
+    radial-gradient(circle at 8% 20%,rgba(121,96,197,.20),transparent 26%),
+    radial-gradient(circle at 88% 12%,rgba(78,183,197,.12),transparent 24%),
+    linear-gradient(135deg,#35415f 0%,#414b68 52%,#35415f 100%)!important;
+  color:#fff!important;
+  overflow:hidden!important;
+}
+.site-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,.025),transparent 35%,rgba(255,255,255,.025));
+}
+.footer-shell{
+  position:relative;
+  z-index:1;
+  max-width:1220px!important;
+  margin:0 auto!important;
+  display:grid!important;
+  grid-template-columns:1.35fr .68fr .68fr 1.15fr!important;
+  gap:34px!important;
+  align-items:start!important;
+}
+.footer-brand{
+  min-width:0;
+}
+.footer-brand-logo,
+.footer-brand img{
+  width:142px!important;
+  height:70px!important;
+  object-fit:contain!important;
+  background:#fff!important;
+  border-radius:18px!important;
+  padding:8px 12px!important;
+  box-shadow:0 10px 25px rgba(17,25,48,.16)!important;
+}
+.footer-brand p{
+  max-width:350px!important;
+  margin:16px 0 8px!important;
+  color:#f4f6fb!important;
+  line-height:1.55!important;
+  font-size:14px!important;
+  font-weight:700!important;
+}
+.footer-place{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:#bfc8dd;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.footer-place::before{
+  content:"●";
+  color:#f2c34f;
+  font-size:9px;
+}
+.footer-links{
+  display:grid!important;
+  align-content:start!important;
+  gap:8px!important;
+}
+.footer-links strong{
+  display:block;
+  margin:2px 0 7px!important;
+  font-family:"Baloo 2",sans-serif!important;
+  font-size:19px!important;
+  line-height:1.1!important;
+  color:#86cfe0!important;
+  font-weight:800!important;
+}
+.footer-links:nth-of-type(3) strong{
+  color:#f3c968!important;
+}
+.footer-links a{
+  width:max-content;
+  max-width:100%;
+  color:#f5f6fa!important;
+  font-weight:700!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+  transition:transform .2s ease,color .2s ease!important;
+}
+.footer-links a:hover{
+  color:#fff2b8!important;
+  transform:translateX(4px)!important;
+}
+.footer-developer{
+  padding:17px 18px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:20px;
+  background:rgba(255,255,255,.07);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+}
+.developer-kicker{
+  display:block;
+  margin-bottom:10px;
+  color:#cbd2e3;
+  font-size:10px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.developer-mark{
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+.developer-monogram{
+  width:46px;
+  height:46px;
+  min-width:46px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:linear-gradient(135deg,#7557c4,#4aaec5 55%,#f1b94a);
+  color:#fff;
+  font-family:"Baloo 2",sans-serif;
+  font-size:16px;
+  font-weight:900;
+  letter-spacing:.03em;
+  box-shadow:0 8px 18px rgba(24,30,55,.22);
+}
+.developer-copy{
+  display:grid;
+  gap:2px;
+  min-width:0;
+}
+.developer-copy strong{
+  color:#fff!important;
+  font-family:"Baloo 2",sans-serif!important;
+  font-size:15px!important;
+  line-height:1.15!important;
+}
+.developer-copy small{
+  color:#c5cde0;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.footer-bottom{
+  position:relative;
+  z-index:1;
+  max-width:1220px!important;
+  margin:26px auto 0!important;
+  padding-top:15px!important;
+  border-top:1px solid rgba(255,255,255,.13)!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  align-items:center!important;
+  gap:18px!important;
+  font-size:10px!important;
+  color:#b9c3d7!important;
+  font-weight:800!important;
+}
+.footer-signature{
+  color:#d7ddec!important;
+}
+
+/* O mascote não cobre o rodapé */
+.aurora-whatsapp-mascot{
+  transition:opacity .24s ease,transform .24s ease!important;
+}
+.aurora-whatsapp-mascot.footer-near{
+  opacity:0!important;
+  pointer-events:none!important;
+  transform:translateY(20px) scale(.94)!important;
+}
+
+@media(max-width:980px){
+  .site-footer{padding:38px 20px 18px!important}
+  .footer-shell{
+    grid-template-columns:1.25fr .8fr .8fr!important;
+    gap:28px!important;
+  }
+  .footer-developer{
+    grid-column:1/-1;
+    max-width:420px;
+  }
+}
+@media(max-width:680px){
+  .site-footer{padding:34px 18px 88px!important}
+  .footer-shell{
+    grid-template-columns:1fr 1fr!important;
+    gap:25px 20px!important;
+  }
+  .footer-brand{
+    grid-column:1/-1;
+  }
+  .footer-brand p{max-width:100%!important}
+  .footer-developer{
+    grid-column:1/-1;
+    max-width:none;
+  }
+  .footer-bottom{
+    margin-top:22px!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    gap:7px!important;
+  }
+}
