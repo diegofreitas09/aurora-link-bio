@@ -22,3 +22,28 @@ const observer=new IntersectionObserver((entries)=>{
 reveals.forEach(el=>observer.observe(el));
 
 document.getElementById('year').textContent=new Date().getFullYear();
+
+
+document.querySelectorAll('.lead-form').forEach(form=>{
+  form.addEventListener('submit',event=>{
+    event.preventDefault();
+    const data=new FormData(form);
+    const responsavel=(data.get('responsavel')||'').toString().trim();
+    const crianca=(data.get('crianca')||'').toString().trim();
+    const idade=(data.get('idade')||'').toString().trim();
+    const periodo=(data.get('periodo')||'').toString().trim();
+    const source=form.dataset.formSource||'Site';
+
+    const linhas=[
+      'Olá! Vim pelo site da Creche Escola Aurora e gostaria de agendar uma visita.',
+      '',
+      'Responsável: '+responsavel,
+      crianca ? 'Criança: '+crianca : '',
+      'Idade: '+idade,
+      'Período de interesse: '+periodo,
+      'Origem: '+source
+    ].filter(Boolean);
+
+    window.open('https://wa.me/558597031125?text='+encodeURIComponent(linhas.join('\n')),'_blank','noopener');
+  });
+});
