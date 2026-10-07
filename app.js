@@ -168,3 +168,21 @@ fetch('assets/mascote.b64?v=2')
   select(0);
   play();
 })();
+
+/* Se uma foto estiver indisponível, mostrar uma foto válida do próprio mural. */
+(() => {
+  const fallback='assets/mural/aurora-contacao-historias.webp';
+  const fallback2='assets/mural/aurora-ambiente.png';
+  document.querySelectorAll('.mural-carousel-image img,.mural-carousel-thumb img,.mural-photo img').forEach(img=>{
+    img.addEventListener('error',()=>{
+      const failed=img.getAttribute('src')||'';
+      if(failed===fallback2)return;
+      img.src=failed===fallback?fallback2:fallback;
+    });
+  });
+  const featured=document.querySelector('.mural-carousel-image img');
+  if(featured){
+    const observer=new MutationObserver(()=>{if(featured.complete&&featured.naturalWidth===0)featured.dispatchEvent(new Event('error'))});
+    observer.observe(featured,{attributes:true,attributeFilter:['src']});
+  }
+})();
