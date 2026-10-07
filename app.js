@@ -59,3 +59,26 @@ const updateMobileVisitCta=()=>{
 window.addEventListener('scroll',updateMobileVisitCta,{passive:true});
 window.addEventListener('resize',updateMobileVisitCta);
 updateMobileVisitCta();
+
+document.querySelectorAll('[data-lightbox-image]').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const box=document.querySelector('.photo-lightbox');
+    const img=box?.querySelector('img');
+    if(!box||!img)return;
+    img.src=button.dataset.lightboxImage||'';
+    box.classList.add('open');
+    box.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  });
+});
+const closeLightbox=()=>{
+  const box=document.querySelector('.photo-lightbox');
+  if(!box)return;
+  box.classList.remove('open');
+  box.setAttribute('aria-hidden','true');
+  const img=box.querySelector('img'); if(img)img.src='';
+  document.body.style.overflow='';
+};
+document.querySelector('.lightbox-close')?.addEventListener('click',closeLightbox);
+document.querySelector('.photo-lightbox')?.addEventListener('click',e=>{if(e.target===e.currentTarget)closeLightbox()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
