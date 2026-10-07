@@ -663,3 +663,35 @@ body{background:#fff;color:var(--ink)}
     height:23px;
   }
 }
+
+/* Mascotes WhatsApp — sem recorte e sem caixa */
+.aurora-whatsapp-mascot{
+  width:124px!important;
+  right:18px!important;
+  bottom:18px!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  overflow:visible!important;
+  filter:drop-shadow(0 10px 16px rgba(47,43,68,.22))!important;
+}
+.aurora-whatsapp-mascot img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+}
+.aurora-whatsapp-mascot::before,
+.aurora-whatsapp-mascot::after{
+  display:none!important;
+  content:none!important;
+}
+@media(max-width:768px){
+  .aurora-whatsapp-mascot{
+    width:92px!important;
+    right:8px!important;
+    bottom:78px!important;
+  }
+}
