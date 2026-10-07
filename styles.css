@@ -505,12 +505,31 @@ body{background:#fff;color:var(--ink)}
 /* Fachada no hero */
 .hero-facade-card{position:relative;display:block;width:100%;overflow:hidden;border-radius:34px;background:#fff;box-shadow:0 24px 60px rgba(70,67,99,.16);border:1px solid rgba(143,115,200,.12);text-decoration:none;transition:transform .22s ease,box-shadow .22s ease}
 .hero-facade-card:hover{transform:translateY(-4px);box-shadow:0 30px 70px rgba(70,67,99,.21)}
-.hero-facade-card img{display:block;width:100%;aspect-ratio:16/7.15;object-fit:cover;object-position:center center;image-rendering:auto;filter:saturate(1.03) contrast(1.02)}
+.hero-facade-card img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/8;
+  object-fit:cover;
+  object-position:center 46%;
+  filter:saturate(1.04) contrast(1.035);
+  transform:translateZ(0);
+}
 .hero-facade-badge{position:absolute;top:16px;left:16px;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);color:#555b72;font-size:12px;font-weight:900;box-shadow:0 8px 18px rgba(40,42,60,.12)}
-.hero-facade-caption{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 26px;background:linear-gradient(135deg,#fff,#faf7ff)}
+.hero-facade-caption{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:17px 22px;
+  background:linear-gradient(135deg,#fff,#faf7ff);
+}
 .hero-facade-caption div{display:grid;gap:4px}
 .hero-facade-caption small{font-size:10px;letter-spacing:.12em;font-weight:900;color:var(--lilac-strong)}
-.hero-facade-caption strong{font:800 24px/1.12 "Baloo 2",sans-serif;color:var(--ink)}
+.hero-facade-caption strong{
+  font:800 21px/1.12 "Baloo 2",sans-serif;
+  color:var(--ink);
+}
 .hero-facade-caption>b{white-space:nowrap;color:var(--lilac-strong);font-size:13px}
 @media(max-width:768px){.hero-facade-card{transform:none;border-radius:26px}.hero-facade-card img{aspect-ratio:16/7}.hero-facade-caption{padding:16px 17px}.hero-facade-caption strong{font-size:17px}.hero-facade-caption>b{display:none}.hero-facade-badge{top:10px;left:10px;font-size:10px;padding:7px 10px}}
 
@@ -524,4 +543,16 @@ body{background:#fff;color:var(--ink)}
 @media(min-width:1280px){
   .hero-facade-card{transform:none}
   .hero-facade-card:hover{transform:translateY(-4px)}
+}
+
+/* Refinamento fachada Git */
+@media(min-width:981px){
+  .hero-shell{max-width:1360px;grid-template-columns:.84fr 1.16fr;gap:42px}
+  .hero-facade-card{border-radius:30px;transform:none!important;box-shadow:0 26px 64px rgba(70,67,99,.15)}
+  .hero-facade-card:hover{transform:translateY(-3px)!important}
+  .hero-facade-badge{top:15px;left:15px}
+  .hero-art{align-self:center}
+}
+@media(max-width:980px){
+  .hero-facade-card img{aspect-ratio:16/8.5}
 }
