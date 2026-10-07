@@ -1503,3 +1503,10 @@ body{background:#fff;color:var(--ink)}
 .mural-gallery-heading .section-kicker{font-size:11px}
 @media(max-width:1050px){.mural-carousel-thumbnails{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media(max-width:630px){.mural-carousel-thumbnails{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;padding:0 12px}.mural-carousel-thumb img{height:128px}.mural-carousel-thumb strong{font-size:15px}.mural-carousel-thumb small{font-size:11px}}
+
+/* Correções de exibição do Mural: não ocultar título sob a barra fixa */
+body .mural-page .mural-hero{padding-top:225px!important}
+body .mural-page .mural-hero-shell{align-items:start}
+body .mural-page .mural-hero h1{margin-top:20px}
+@media(max-width:950px){body .mural-page .mural-hero{padding-top:190px!important}}
+@media(max-width:560px){body .mural-page .mural-hero{padding-top:165px!important}}
