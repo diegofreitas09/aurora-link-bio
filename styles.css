@@ -184,3 +184,13 @@ body{background:#fff;color:var(--ink)}
   .hero h1{font-size:44px;line-height:1}
   .hero-copy>p{line-height:1.65}
 }
+
+/* Fotos reais no mural Aurora */
+.photo-has-image{background:#ececf3}
+.photo-real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease,filter .45s ease}
+.photo-has-image:hover .photo-real{transform:scale(1.025)}
+.photo-main .photo-real{object-position:center 48%}
+.photo-slot[data-photo="atividade-sensorial"] .photo-real,
+.photo-slot[data-photo="espaco-pedagogico"] .photo-real{object-position:center center}
+.photo-has-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(42,46,64,.16));pointer-events:none}
+.photo-has-image .photo-caption{z-index:2}
