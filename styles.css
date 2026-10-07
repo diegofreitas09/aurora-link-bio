@@ -445,3 +445,19 @@ body{background:#fff;color:var(--ink)}
 @media(prefers-reduced-motion:reduce){
   .aurora-whatsapp-mascot{animation:none}
 }
+
+/* Ajuste das fotos originais do Mural Aurora */
+.mural-home-card.featured{min-height:610px}
+.mural-home-card.featured img{object-position:center 48%}
+.mural-home-card:nth-child(2) img{object-position:center 54%}
+.mural-home-card:nth-child(3) img{object-position:center 27%}
+.mural-photo-wide img{object-position:center 48%}
+.mural-photo:nth-child(2) img{object-position:center 54%}
+.mural-photo:nth-child(3) img{object-position:center 27%}
+@media(max-width:760px){
+  .mural-home-card.featured{min-height:390px}
+  .mural-home-card:nth-child(3) img{object-position:center 33%}
+}
+@media(max-width:420px){
+  .mural-home-card.featured{min-height:345px}
+}
