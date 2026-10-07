@@ -1510,3 +1510,13 @@ body .mural-page .mural-hero-shell{align-items:start}
 body .mural-page .mural-hero h1{margin-top:20px}
 @media(max-width:950px){body .mural-page .mural-hero{padding-top:190px!important}}
 @media(max-width:560px){body .mural-page .mural-hero{padding-top:165px!important}}
+
+/* Mural: cabeçalho no fluxo da página, sem cobrir fotografias ou título ao rolar */
+body.mural-body .site-header{position:sticky;top:0;left:auto;right:auto;padding:12px 24px;z-index:50}
+body.mural-body .mural-page .mural-hero{padding-top:28px!important}
+body.mural-body .mural-hero-shell{align-items:center}
+body.mural-body .mural-carousel-image>img{object-fit:contain;object-position:center;background:#f3edfb}
+body.mural-body .mural-carousel-image{background:#f3edfb}
+body.mural-body .mural-carousel-thumb img{object-fit:cover}
+@media(max-width:950px){body.mural-body .mural-page .mural-hero{padding-top:20px!important}}
+@media(max-width:560px){body.mural-body .site-header{padding:8px 12px}body.mural-body .mural-page .mural-hero{padding-top:16px!important}}
