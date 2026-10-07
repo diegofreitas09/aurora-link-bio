@@ -82,3 +82,18 @@ const closeLightbox=()=>{
 document.querySelector('.lightbox-close')?.addEventListener('click',closeLightbox);
 document.querySelector('.photo-lightbox')?.addEventListener('click',e=>{if(e.target===e.currentTarget)closeLightbox()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+
+
+/* Mascotes Aurora: carrega o arquivo original otimizado como data URI,
+   evitando corrupção de imagem no deploy. */
+fetch('assets/mascote.b64?v=2')
+  .then(r=>r.ok?r.text():Promise.reject(new Error('mascote')))
+  .then(b64=>{
+    const src='data:image/webp;base64,'+b64.trim();
+    document.querySelectorAll('.aurora-whatsapp-mascot img').forEach(img=>{
+      img.src=src;
+      img.removeAttribute('width');
+      img.removeAttribute('height');
+    });
+  })
+  .catch(()=>{});
