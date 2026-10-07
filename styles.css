@@ -501,3 +501,15 @@ body{background:#fff;color:var(--ink)}
   .history-story p{font-size:15.5px;line-height:1.82}
   .history-story blockquote{padding:22px 22px;font-size:19px}
 }
+
+/* Fachada no hero */
+.hero-facade-card{position:relative;display:block;overflow:hidden;border-radius:34px;background:#fff;box-shadow:0 24px 60px rgba(70,67,99,.16);border:1px solid rgba(143,115,200,.12);text-decoration:none;transform:rotate(1deg);transition:transform .22s ease,box-shadow .22s ease}
+.hero-facade-card:hover{transform:rotate(0) translateY(-4px);box-shadow:0 30px 70px rgba(70,67,99,.21)}
+.hero-facade-card img{display:block;width:100%;aspect-ratio:16/6;object-fit:cover}
+.hero-facade-badge{position:absolute;top:16px;left:16px;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);color:#555b72;font-size:12px;font-weight:900;box-shadow:0 8px 18px rgba(40,42,60,.12)}
+.hero-facade-caption{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;background:linear-gradient(135deg,#fff,#faf7ff)}
+.hero-facade-caption div{display:grid;gap:4px}
+.hero-facade-caption small{font-size:10px;letter-spacing:.12em;font-weight:900;color:var(--lilac-strong)}
+.hero-facade-caption strong{font:800 20px/1.15 "Baloo 2",sans-serif;color:var(--ink)}
+.hero-facade-caption>b{white-space:nowrap;color:var(--lilac-strong);font-size:13px}
+@media(max-width:768px){.hero-facade-card{transform:none;border-radius:26px}.hero-facade-card img{aspect-ratio:16/7}.hero-facade-caption{padding:16px 17px}.hero-facade-caption strong{font-size:17px}.hero-facade-caption>b{display:none}.hero-facade-badge{top:10px;left:10px;font-size:10px;padding:7px 10px}}
