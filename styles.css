@@ -1486,3 +1486,20 @@ body{background:#fff;color:var(--ink)}
 @media(max-width:950px){.mural-hero-shell{grid-template-columns:1fr;gap:30px}.mural-hero{padding-top:120px}.mural-carousel-image{height:clamp(320px,55vw,490px)}.mural-highlights{margin-top:20px}.mural-carousel-thumbnails{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.mural-hero{padding:118px 18px 46px}.mural-hero h1{font-size:clamp(40px,11vw,56px)}.mural-carousel-frame{border-width:7px;border-radius:27px}.mural-carousel-image{height:310px;border-radius:21px}.mural-carousel-prev,.mural-carousel-next{width:40px;height:40px;font-size:30px}.mural-carousel-prev{left:-8px}.mural-carousel-next{right:-8px}.mural-carousel-caption{left:19px;bottom:18px}.mural-carousel-caption strong{font-size:23px}.mural-carousel-caption small{font-size:11px}.mural-carousel-thumbnails{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 3px 14px;margin-top:22px;scrollbar-width:thin}.mural-carousel-thumb{flex:0 0 68%;scroll-snap-align:start}.mural-carousel-thumb img{height:130px}.mural-highlights{gap:10px}.mural-highlights>span{font-size:10px}.mural-highlight-icon{width:31px;height:31px;font-size:17px}}
 @media(prefers-reduced-motion:reduce){.mural-carousel-thumb,.mural-carousel-prev,.mural-carousel-next,.mural-carousel-image>img{transition:none}}
+
+/* Mural Aurora: galeria pastel inspirada na composição aprovada */
+.mural-hero{background:radial-gradient(ellipse at 13% 35%,#f2ecff 0%,transparent 47%),linear-gradient(135deg,#fff,#f8f3ff 57%,#eaf8fc);padding-bottom:46px}
+.mural-carousel-frame{border-radius:32px;box-shadow:0 24px 50px rgba(91,75,148,.12);overflow:visible}
+.mural-carousel-image{border-radius:28px;overflow:hidden}
+.mural-carousel-image img{object-fit:cover}
+.mural-carousel-thumbnails{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:14px!important;max-width:1350px;margin:24px auto 0;padding:0 18px}
+.mural-carousel-thumb{min-width:0;display:flex;flex-direction:column;overflow:hidden;border-radius:20px!important;background:#fff!important;border:2px solid transparent!important;padding:7px!important;text-align:left;box-shadow:0 12px 32px rgba(87,69,137,.09);transition:transform .2s,border-color .2s}
+.mural-carousel-thumb:hover{transform:translateY(-4px)}
+.mural-carousel-thumb.is-active{border-color:#a080e8!important;background:#f8f2ff!important}
+.mural-carousel-thumb img{width:100%;height:143px;object-fit:cover;border-radius:13px}
+.mural-carousel-thumb span{display:block;padding:12px 5px 8px}
+.mural-carousel-thumb strong{display:block;font-family:"Baloo 2",sans-serif;color:#6250a0;line-height:1.15;font-size:17px}
+.mural-carousel-thumb small{display:block;color:#6d7890;font-size:12px;line-height:1.4;margin-top:5px}
+.mural-gallery-heading .section-kicker{font-size:11px}
+@media(max-width:1050px){.mural-carousel-thumbnails{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:630px){.mural-carousel-thumbnails{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;padding:0 12px}.mural-carousel-thumb img{height:128px}.mural-carousel-thumb strong{font-size:15px}.mural-carousel-thumb small{font-size:11px}}
