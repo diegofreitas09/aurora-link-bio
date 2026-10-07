@@ -14,9 +14,3 @@
   from = "/bio"
   to = "/"
   status = 301
-
-[[redirects]]
-  from = "https://aurora-link-bio.netlify.app/*"
-  to = "https://crecheescolaaurora.com.br/:splat"
-  status = 301
-  force = true
