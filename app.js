@@ -97,3 +97,15 @@ fetch('assets/mascote.b64?v=2')
     });
   })
   .catch(()=>{});
+
+
+/* Evita que o mascote flutuante cubra o rodapé institucional. */
+(() => {
+  const footer = document.querySelector('.site-footer');
+  const mascot = document.querySelector('.aurora-whatsapp-mascot');
+  if (!footer || !mascot || !('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(([entry]) => {
+    mascot.classList.toggle('footer-near', entry.isIntersecting);
+  }, { threshold: 0.04 });
+  observer.observe(footer);
+})();
