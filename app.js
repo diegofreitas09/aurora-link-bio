@@ -35,7 +35,7 @@ document.querySelectorAll('.lead-form').forEach(form=>{
     const source=form.dataset.formSource||'Site';
 
     const linhas=[
-      'Olá! Vim pelo site da Creche Escola Aurora e gostaria de agendar uma visita.',
+      'Olá! Vim pelo site da Creche Escolo Aurora e gostaria de agendar uma visita.',
       '',
       'Responsável: '+responsavel,
       crianca ? 'Criança: '+crianca : '',
