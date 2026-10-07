@@ -1151,3 +1151,14 @@ body{background:#fff;color:var(--ink)}
 .footer-developer:hover .developer-access b{
   transform:translateX(4px);
 }
+
+
+/* Cursor personalizado Aurora — solzinho */
+@media (pointer:fine){
+  html, body, *{
+    cursor:url("assets/cursor-sol.svg") 16 16, auto!important;
+  }
+  a, button, [role="button"], input[type="button"], input[type="submit"], .aurora-whatsapp-mascot{
+    cursor:url("assets/cursor-sol.svg") 16 16, pointer!important;
+  }
+}
