@@ -1118,3 +1118,36 @@ body{background:#fff;color:var(--ink)}
     gap:7px!important;
   }
 }
+
+
+/* Link de acesso à PDF Solução Educacional */
+.footer-developer{
+  display:block!important;
+  text-decoration:none!important;
+  color:inherit!important;
+  cursor:pointer!important;
+  transition:transform .2s ease,border-color .2s ease,background .2s ease!important;
+}
+.footer-developer:hover{
+  transform:translateY(-3px)!important;
+  border-color:rgba(255,255,255,.28)!important;
+  background:rgba(255,255,255,.11)!important;
+}
+.developer-access{
+  margin-top:12px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:#fff;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.03em;
+}
+.developer-access b{
+  font-size:15px;
+  color:#f3c968;
+  transition:transform .2s ease;
+}
+.footer-developer:hover .developer-access b{
+  transform:translateX(4px);
+}
