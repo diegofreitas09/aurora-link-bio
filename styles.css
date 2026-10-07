@@ -51,3 +51,106 @@
 .routine-section{background:#f7fbfd}.routine-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.routine-section .section-heading .button{margin-top:22px}.routine-timeline{position:relative;display:grid;gap:13px}.routine-timeline:before{content:"";position:absolute;left:27px;top:30px;bottom:30px;width:2px;background:linear-gradient(#d9cdef,#bce2f2,#f2d690)}.routine-timeline article{position:relative;display:grid;grid-template-columns:56px 1fr;gap:15px;align-items:center;padding:16px 18px 16px 0;border-radius:22px;background:#fff;border:1px solid #edf0f2;box-shadow:0 10px 28px rgba(77,80,105,.05)}.routine-timeline article>span{position:relative;z-index:2;width:56px;height:56px;display:grid;place-items:center;border-radius:18px;background:#f4ecff;color:#7b65ba;font-size:10px;font-weight:900;margin-left:0}.routine-timeline article:nth-child(2)>span{background:#e9f7fd;color:#4b8ba8}.routine-timeline article:nth-child(3)>span{background:#fff4dc;color:#a87b2a}.routine-timeline article:nth-child(4)>span{background:#fdebe7;color:#ae6d65}.routine-timeline b{font:800 21px/1 "Baloo 2",sans-serif}.routine-timeline p{margin:4px 0 0;color:var(--muted);font-size:13px;font-weight:700;line-height:1.55}
 @media(max-width:980px){.gallery-heading,.routine-layout{grid-template-columns:1fr}.photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:380px 220px 220px}.photo-main{grid-column:span 2;grid-row:auto}.audience-grid{grid-template-columns:1fr 1fr}.audience-card:last-child{grid-column:span 2}}
 @media(max-width:640px){.gallery-heading{gap:18px}.photo-grid{grid-template-columns:1fr;grid-template-rows:none}.photo-slot,.photo-main{grid-column:auto;grid-row:auto;min-height:240px}.photo-main{min-height:320px}.gallery-actions{align-items:stretch;flex-direction:column}.gallery-actions .button,.gallery-actions .text-link{text-align:center}.audience-grid{grid-template-columns:1fr}.audience-card:last-child{grid-column:auto}.audience-card p{min-height:auto}.routine-layout{gap:35px}.routine-timeline article{grid-template-columns:50px 1fr}.routine-timeline article>span{width:50px;height:50px;border-radius:16px}}
+
+
+/* Aurora Brand System — lavanda + branco, azul/verde-água de apoio, laranja/amarelo de destaque */
+:root{
+  --ink:#3f4660;
+  --muted:#72798c;
+  --lilac:#aa91d8;
+  --lilac-strong:#8f73c8;
+  --lilac-soft:#f2edf9;
+  --blue:#78bfe6;
+  --blue-soft:#eaf6fc;
+  --aqua:#76cfc3;
+  --aqua-soft:#e9f8f5;
+  --orange:#f3a05f;
+  --orange-soft:#fff0e4;
+  --yellow:#f4d368;
+  --yellow-soft:#fff8df;
+  --mint:#bfe9df;
+  --white:#fff;
+  --brand-gradient:linear-gradient(115deg,#aa91d8 0%,#78bfe6 34%,#76cfc3 58%,#f4d368 80%,#f3a05f 100%);
+  --shadow:0 24px 70px rgba(91,83,126,.12);
+}
+
+/* Base mais clara e acolhedora */
+body{background:#fff;color:var(--ink)}
+.nav-shell{background:rgba(255,255,255,.9);border-color:rgba(170,145,216,.14);box-shadow:0 10px 34px rgba(95,84,132,.08)}
+.main-nav>a:not(.nav-cta):after{background:var(--aqua)}
+.nav-cta,.button-primary{background:var(--lilac-strong);box-shadow:0 12px 26px rgba(143,115,200,.22)}
+.nav-cta:hover,.button-primary:hover{background:#8266bd}
+.button-soft{border-color:#e9e3f1}
+.button-white{color:var(--lilac-strong)}
+
+/* O degradê fica como assinatura, não como regra */
+.hero{background:linear-gradient(145deg,#ffffff 0%,#f7f3fb 56%,#eef9f7 100%)}
+.hero h1 span{background:var(--brand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-card{background:linear-gradient(145deg,#f2edf9 0%,#eaf6fc 52%,#e9f8f5 100%)}
+.hero-card:after{content:"";position:absolute;inset:auto 10% 8% 10%;height:9px;border-radius:999px;background:var(--brand-gradient);opacity:.82}
+.eyebrow,.section-kicker{color:#826ab8}
+.eyebrow i{background:var(--yellow);box-shadow:0 0 0 6px rgba(244,211,104,.18)}
+.orb-one{background:#f1ebf8}.orb-two{background:#e5f7f4}
+.rainbow-line{border-color:rgba(244,211,104,.24)}
+.spark{color:var(--yellow)}.spark-b{color:var(--lilac)}
+
+/* Cards e áreas de apoio */
+.section-pastel{background:linear-gradient(180deg,#faf8fd 0,#f4fbfa 100%)}
+.icon.lilac{background:var(--lilac-soft)}.icon.yellow{background:var(--yellow-soft)}.icon.blue{background:var(--blue-soft)}
+.experience-card.large{background:linear-gradient(145deg,var(--lilac-soft),#fff)}
+.experience-card:nth-child(2){background:var(--blue-soft)}
+.experience-card:nth-child(3){background:var(--yellow-soft)}
+.experience-card:nth-child(4){background:var(--aqua-soft)}
+.experience-card:nth-child(5){background:#f7f4fb}
+.family-panel{background:linear-gradient(135deg,#fff 0%,var(--lilac-soft) 52%,var(--aqua-soft) 100%)}
+.family-circle{background:linear-gradient(145deg,var(--lilac-strong),var(--aqua));box-shadow:0 30px 65px rgba(111,96,159,.20)}
+.mini-star.one{color:var(--yellow)}.mini-star.two{color:var(--orange)}
+
+/* Chamadas de alto impacto: uso controlado do degradê da marca */
+.visit-card,.mini-cta-shell{background:var(--brand-gradient)}
+.visit-card,.mini-cta-shell{box-shadow:0 28px 70px rgba(111,96,159,.18)}
+.section-kicker.light{color:#fff9d7}
+
+/* Localização e confiança */
+.section-location,.routine-section{background:#f6fbfb}
+.map-art{background:linear-gradient(135deg,var(--aqua-soft),#faf7ed 62%,var(--blue-soft))}
+.map-art:before,.map-art:after{background:#d9f0e9}
+.pin strong,.text-link{color:var(--lilac-strong)}
+.trust-shell>a{background:var(--lilac-soft);color:#765faa}
+.conversion-journey{background:#fffaf0}
+.lead-section{background:linear-gradient(150deg,#f7f3fb 0%,#fff 48%,#eef9f7 100%)}
+.form-heading>span{background:var(--lilac-soft)}
+.lead-form input:focus,.lead-form select:focus{border-color:var(--lilac);box-shadow:0 0 0 3px rgba(170,145,216,.13)}
+.faq-list summary span{color:var(--lilac-strong)}
+
+/* Galeria e etapas */
+.photo-placeholder{background:linear-gradient(145deg,var(--lilac-soft),#fff);color:#7563a3}
+.lilac-bg{background:linear-gradient(145deg,var(--lilac-soft),#f8f5fc)}
+.blue-bg{background:linear-gradient(145deg,var(--blue-soft),#f5fbfe)}
+.coral-bg{background:linear-gradient(145deg,var(--orange-soft),#fff9f3)}
+.mint-bg{background:linear-gradient(145deg,var(--aqua-soft),#f6fcfa)}
+.audience-section{background:linear-gradient(180deg,#fff,var(--lilac-soft) 100%)}
+.audience-card:nth-child(2){background:#f8f5fc}.audience-card:nth-child(3){background:var(--aqua-soft)}
+.audience-card small,.audience-card b{color:#7962ad}
+.routine-timeline:before{background:linear-gradient(var(--lilac),var(--blue),var(--aqua),var(--yellow))}
+.routine-timeline article>span{background:var(--lilac-soft);color:#755ead}
+.routine-timeline article:nth-child(2)>span{background:var(--blue-soft);color:#4a86a6}
+.routine-timeline article:nth-child(3)>span{background:var(--aqua-soft);color:#3d8b80}
+.routine-timeline article:nth-child(4)>span{background:var(--yellow-soft);color:#9a7a2c}
+
+/* Páginas internas seguem a mesma linguagem */
+.inner-hero{background:linear-gradient(145deg,#fff 0%,#f7f3fb 54%,#eef9f7 100%)}
+.inner-brand-art{background:linear-gradient(145deg,var(--lilac-soft),var(--blue-soft) 52%,var(--aqua-soft))}
+.inner-star.one{color:var(--yellow)}.inner-star.two{color:var(--lilac)}
+.inner-orb.a{background:#efe9f7}.inner-orb.b{background:#e6f7f4}
+.detail-card:nth-child(4n+1){background:#faf7fd}.detail-card:nth-child(4n+2){background:var(--blue-soft)}.detail-card:nth-child(4n+3){background:var(--aqua-soft)}.detail-card:nth-child(4n){background:var(--yellow-soft)}
+.detail-number{color:var(--lilac-strong)}
+
+/* Rodapé neutro, para a paleta respirar */
+.site-footer{background:#454b64}
+.footer-brand p{color:#d6dae4}.footer-links a{color:#e1e4eb}.footer-bottom{color:#b7bfcd}
+
+/* Mobile: CTA sólido; degradê fica reservado aos blocos de marca */
+@media(max-width:640px){
+  .mobile-visit-cta{background:var(--lilac-strong);box-shadow:0 12px 30px rgba(103,82,156,.25)}
+}
