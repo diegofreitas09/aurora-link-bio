@@ -614,3 +614,52 @@ body{background:#fff;color:var(--ink)}
     bottom:78px!important;
   }
 }
+
+/* Mascotes WhatsApp — ajuste final */
+.aurora-whatsapp-mascot{
+  width:116px!important;
+  right:22px!important;
+  bottom:22px!important;
+  padding:5px!important;
+  border-radius:26px!important;
+  background:rgba(255,255,255,.92)!important;
+  box-shadow:0 12px 30px rgba(47,43,68,.18)!important;
+  filter:none!important;
+  overflow:visible!important;
+  line-height:0!important;
+}
+.aurora-whatsapp-mascot img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+.aurora-whatsapp-mascot::before{
+  display:none!important;
+  content:none!important;
+}
+.aurora-whatsapp-mascot::after{
+  content:"";
+  position:absolute;
+  right:-4px;
+  bottom:-4px;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:#25D366;
+  border:3px solid #fff;
+  box-shadow:0 5px 12px rgba(0,0,0,.16);
+}
+@media(max-width:768px){
+  .aurora-whatsapp-mascot{
+    width:88px!important;
+    right:10px!important;
+    bottom:82px!important;
+    padding:4px!important;
+    border-radius:22px!important;
+  }
+  .aurora-whatsapp-mascot::after{
+    width:23px;
+    height:23px;
+  }
+}
