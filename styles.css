@@ -746,3 +746,162 @@ body{background:#fff;color:var(--ink)}
 .history-chip:nth-child(2) strong{color:#d28a13!important}
 .history-chip:nth-child(3) strong{color:#168ba4!important}
 .history-chip:nth-child(4) strong{color:#6a54bd!important}
+
+
+/* =========================================================
+   HOME AURORA — CARDS COLORIDOS + ÍCONES ILUSTRADOS
+   ========================================================= */
+.value-card,
+.audience-card,
+.journey-card,
+.experience-card,
+.routine-timeline article{
+  border:1px solid rgba(91,84,140,.10)!important;
+  box-shadow:0 14px 34px rgba(71,74,110,.08)!important;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease!important;
+}
+.value-card:hover,
+.audience-card:hover,
+.journey-card:hover,
+.experience-card:hover,
+.routine-timeline article:hover{
+  transform:translateY(-5px)!important;
+  box-shadow:0 20px 44px rgba(71,74,110,.13)!important;
+  border-color:rgba(123,91,199,.18)!important;
+}
+
+/* Nossa essência */
+.value-card:nth-child(1){background:linear-gradient(145deg,#f7f1ff,#efe6ff)!important}
+.value-card:nth-child(2){background:linear-gradient(145deg,#fff9e8,#fff1c9)!important}
+.value-card:nth-child(3){background:linear-gradient(145deg,#eef9ff,#dff2ff)!important}
+.value-card:nth-child(1) h3{color:#7456bf!important}
+.value-card:nth-child(2) h3{color:#c88616!important}
+.value-card:nth-child(3) h3{color:#168da7!important}
+
+/* Etapas */
+.audience-card:nth-child(1){background:linear-gradient(145deg,#fff4f6,#fde8ee)!important}
+.audience-card:nth-child(2){background:linear-gradient(145deg,#f6f1ff,#eee6ff)!important}
+.audience-card:nth-child(3){background:linear-gradient(145deg,#eefaf5,#def4eb)!important}
+.audience-card:nth-child(1) h3{color:#e06f91!important}
+.audience-card:nth-child(2) h3{color:#7157bd!important}
+.audience-card:nth-child(3) h3{color:#218c77!important}
+
+/* Rotina com quatro cores */
+.routine-timeline article:nth-child(1){background:linear-gradient(135deg,#f7f1ff,#fff)!important}
+.routine-timeline article:nth-child(2){background:linear-gradient(135deg,#eaf7ff,#fff)!important}
+.routine-timeline article:nth-child(3){background:linear-gradient(135deg,#eaf9f3,#fff)!important}
+.routine-timeline article:nth-child(4){background:linear-gradient(135deg,#fff7dc,#fff)!important}
+.routine-timeline article:nth-child(1) b{color:#7358bf!important}
+.routine-timeline article:nth-child(2) b{color:#147fa5!important}
+.routine-timeline article:nth-child(3) b{color:#2d8e72!important}
+.routine-timeline article:nth-child(4) b{color:#b97b10!important}
+
+/* Jornada da família */
+.journey-card:nth-child(1){background:linear-gradient(145deg,#f6f0ff,#eee5ff)!important}
+.journey-card:nth-child(2){background:linear-gradient(145deg,#eaf7ff,#dff1ff)!important}
+.journey-card:nth-child(3){background:linear-gradient(145deg,#fff1f5,#fde5ec)!important}
+.journey-card:nth-child(1) h3{color:#7358bf!important}
+.journey-card:nth-child(2) h3{color:#168ca8!important}
+.journey-card:nth-child(3) h3{color:#d86487!important}
+
+/* Experiências */
+.experience-card.large{background:linear-gradient(145deg,#f6efff,#eee4ff)!important}
+.experience-card:nth-child(2){background:linear-gradient(145deg,#eaf7ff,#dff1ff)!important}
+.experience-card:nth-child(3){background:linear-gradient(145deg,#fff7dc,#fff0bf)!important}
+.experience-card:nth-child(4){background:linear-gradient(145deg,#eaf9f2,#dcf2e6)!important}
+.experience-card:nth-child(5){background:linear-gradient(145deg,#f5efff,#ebe2ff)!important}
+.experience-card.large h3{color:#7358bf!important}
+.experience-card:nth-child(2) h3{color:#147fa5!important}
+.experience-card:nth-child(3) h3{color:#b97b10!important}
+.experience-card:nth-child(4) h3{color:#2d8e72!important}
+.experience-card:nth-child(5) h3{color:#7254bd!important}
+
+/* Ícones vetoriais ilustrados */
+.icon,
+.audience-icon,
+.journey-icon,
+.experience-icon{
+  width:68px!important;
+  height:68px!important;
+  min-width:68px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:22px!important;
+  background:rgba(255,255,255,.82)!important;
+  box-shadow:0 9px 24px rgba(64,66,92,.10)!important;
+  border:1px solid rgba(255,255,255,.9)!important;
+  overflow:hidden!important;
+  line-height:0!important;
+}
+.icon img,
+.audience-icon img,
+.journey-icon img,
+.experience-icon img{
+  width:44px!important;
+  height:44px!important;
+  object-fit:contain!important;
+  display:block!important;
+}
+.experience-card.large .experience-icon{
+  width:78px!important;
+  height:78px!important;
+}
+.experience-card.large .experience-icon img{
+  width:52px!important;
+  height:52px!important;
+}
+
+/* Mascotes do WhatsApp — inteiro, transparente e sem invadir os cards */
+.aurora-whatsapp-mascot{
+  position:fixed!important;
+  right:18px!important;
+  bottom:18px!important;
+  width:112px!important;
+  height:auto!important;
+  padding:0!important;
+  margin:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+  filter:drop-shadow(0 10px 18px rgba(32,39,65,.23))!important;
+  z-index:120!important;
+}
+.aurora-whatsapp-mascot img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+}
+.aurora-whatsapp-mascot::before,
+.aurora-whatsapp-mascot::after{
+  display:none!important;
+  content:none!important;
+}
+
+@media(max-width:768px){
+  .icon,
+  .audience-icon,
+  .journey-icon,
+  .experience-icon{
+    width:58px!important;
+    height:58px!important;
+    min-width:58px!important;
+    border-radius:18px!important;
+  }
+  .icon img,
+  .audience-icon img,
+  .journey-icon img,
+  .experience-icon img{
+    width:38px!important;
+    height:38px!important;
+  }
+  .aurora-whatsapp-mascot{
+    width:84px!important;
+    right:8px!important;
+    bottom:76px!important;
+  }
+}
