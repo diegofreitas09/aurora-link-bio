@@ -47,3 +47,15 @@ document.querySelectorAll('.lead-form').forEach(form=>{
     window.open('https://wa.me/558597031125?text='+encodeURIComponent(linhas.join('\n')),'_blank','noopener');
   });
 });
+
+
+const mobileVisitCta=document.querySelector('.mobile-visit-cta');
+const heroSection=document.querySelector('.hero, .inner-hero');
+const updateMobileVisitCta=()=>{
+  if(!mobileVisitCta)return;
+  const trigger=heroSection ? Math.max(420,heroSection.offsetHeight*.62) : 420;
+  mobileVisitCta.classList.toggle('is-visible',window.scrollY>trigger);
+};
+window.addEventListener('scroll',updateMobileVisitCta,{passive:true});
+window.addEventListener('resize',updateMobileVisitCta);
+updateMobileVisitCta();
