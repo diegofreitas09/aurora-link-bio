@@ -194,3 +194,37 @@ body{background:#fff;color:var(--ink)}
 .photo-slot[data-photo="espaco-pedagogico"] .photo-real{object-position:center center}
 .photo-has-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(42,46,64,.16));pointer-events:none}
 .photo-has-image .photo-caption{z-index:2}
+
+/* Mural de Fotos */
+.mural-page{background:#fff}
+.mural-hero{padding:155px 24px 85px;background:linear-gradient(145deg,#fff 0%,#f7f3fb 55%,#eef9f7 100%);overflow:hidden}
+.mural-hero-shell,.mural-gallery-shell{max-width:1200px;margin:auto}
+.mural-hero-shell{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.mural-hero h1{font:800 clamp(48px,6vw,76px)/.98 "Baloo 2",sans-serif;letter-spacing:-.04em;margin:16px 0}
+.mural-hero p{max-width:760px;color:var(--muted);font-size:18px;line-height:1.75;font-weight:700}
+.mural-stamp{min-height:330px;border-radius:42% 58% 51% 49% / 46% 45% 55% 54%;background:var(--brand-gradient);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:35px;box-shadow:0 30px 70px rgba(111,96,159,.18);transform:rotate(2deg)}
+.mural-stamp span{font-size:58px}.mural-stamp strong{font:800 38px/1 "Baloo 2",sans-serif;margin-top:12px}.mural-stamp small{margin-top:8px;font-size:11px;letter-spacing:.08em;font-weight:900}
+.mural-gallery-section{padding:95px 24px 110px}
+.mural-gallery-heading{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end}
+.mural-gallery-heading h2{font:800 clamp(38px,5vw,58px)/1.04 "Baloo 2",sans-serif;margin:15px 0 0}
+.mural-gallery-heading>p{color:var(--muted);font-weight:700;line-height:1.7;margin:0}
+.mural-grid{margin-top:42px;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:16px}
+.mural-photo,.mural-placeholder{position:relative;border:0;border-radius:28px;overflow:hidden;background:#f4f2f8;box-shadow:0 14px 36px rgba(76,78,102,.07)}
+.mural-photo{padding:0;cursor:zoom-in;text-align:left}
+.mural-photo-wide{grid-column:span 2}.mural-photo-tall{grid-row:span 2}
+.mural-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.mural-photo:hover img{transform:scale(1.025)}
+.mural-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(33,38,55,.38))}
+.mural-photo>span{position:absolute;left:18px;right:18px;bottom:17px;z-index:2;color:#fff;display:grid;gap:2px}
+.mural-photo b{font:800 22px/1.05 "Baloo 2",sans-serif}.mural-photo small{font-size:11px;font-weight:800}
+.mural-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(143,115,200,.3);background:linear-gradient(145deg,var(--lilac-soft),#fff)}
+.mural-placeholder:nth-of-type(5){background:linear-gradient(145deg,var(--blue-soft),#fff)}
+.mural-placeholder:nth-of-type(6){background:linear-gradient(145deg,var(--yellow-soft),#fff)}
+.mural-placeholder span{font-size:42px}.mural-placeholder b{font:800 22px/1 "Baloo 2",sans-serif;margin-top:12px}.mural-placeholder small{margin-top:6px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.mural-bottom-cta{margin-top:55px;padding:38px 42px;border-radius:32px;background:linear-gradient(135deg,#f7f3fb,#eef9f7);display:flex;align-items:center;justify-content:space-between;gap:30px}
+.mural-bottom-cta h2{font:800 35px/1 "Baloo 2",sans-serif;margin:8px 0 0;max-width:720px}
+.photo-lightbox{position:fixed;inset:0;z-index:100;background:rgba(25,28,39,.9);display:none;align-items:center;justify-content:center;padding:28px}
+.photo-lightbox.open{display:flex}.photo-lightbox img{max-width:min(1100px,94vw);max-height:88vh;border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.lightbox-close{position:absolute;top:20px;right:24px;width:48px;height:48px;border-radius:50%;border:1px solid #ffffff35;background:#fff;color:#4a4f63;font-size:30px;cursor:pointer}
+@media(max-width:980px){.mural-hero-shell,.mural-gallery-heading{grid-template-columns:1fr}.mural-stamp{max-width:520px;width:100%;margin:auto}.mural-grid{grid-template-columns:1fr 1fr}.mural-photo-wide{grid-column:span 2}.mural-photo-tall{grid-row:auto}.mural-bottom-cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:640px){.mural-hero{padding:120px 18px 65px}.mural-hero h1{font-size:46px}.mural-stamp{min-height:250px}.mural-gallery-section{padding:72px 18px 82px}.mural-grid{grid-template-columns:1fr;grid-auto-rows:280px}.mural-photo-wide{grid-column:auto}.mural-photo-tall{grid-row:auto}.mural-bottom-cta{padding:28px 24px}.mural-bottom-cta h2{font-size:31px}}
