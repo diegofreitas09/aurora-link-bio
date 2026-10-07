@@ -109,3 +109,62 @@ fetch('assets/mascote.b64?v=2')
   }, { threshold: 0.04 });
   observer.observe(footer);
 })();
+
+/* Mural Aurora: carrossel acessível, miniaturas e rotação automática. */
+(() => {
+  const carousel=document.querySelector('[data-mural-carousel]');
+  if(!carousel)return;
+  const thumbs=[...document.querySelectorAll('.mural-carousel-thumb')];
+  const dots=[...carousel.querySelectorAll('.mural-carousel-dots button')];
+  const image=carousel.querySelector('[data-carousel-image]');
+  const photoButton=carousel.querySelector('.mural-carousel-image');
+  const title=carousel.querySelector('[data-carousel-title]');
+  const description=carousel.querySelector('[data-carousel-description]');
+  if(!thumbs.length||!image||!photoButton||!title||!description)return;
+  let selected=0;
+  let timer=null;
+  let pointerStart=null;
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const select=index=>{
+    selected=(index+thumbs.length)%thumbs.length;
+    const item=thumbs[selected];
+    image.src=item.dataset.src;
+    image.alt=item.dataset.alt||'Fotografia da Creche Escola Aurora';
+    title.textContent=item.dataset.title||'Viver o Aurora';
+    description.textContent=item.dataset.description||'Experiências do Aurora';
+    photoButton.dataset.lightboxImage=item.dataset.src;
+    thumbs.forEach((button,i)=>{
+      button.classList.toggle('is-active',i===selected);
+      button.setAttribute('aria-pressed',String(i===selected));
+    });
+    dots.forEach((button,i)=>{
+      button.classList.toggle('is-active',i===selected);
+      if(i===selected)button.setAttribute('aria-current','true');
+      else button.removeAttribute('aria-current');
+    });
+  };
+  const stop=()=>{if(timer!==null){clearInterval(timer);timer=null;}};
+  const play=()=>{stop();if(!reducedMotion&&!document.hidden)timer=setInterval(()=>select(selected+1),5500);};
+  carousel.querySelector('.mural-carousel-prev')?.addEventListener('click',()=>{select(selected-1);play()});
+  carousel.querySelector('.mural-carousel-next')?.addEventListener('click',()=>{select(selected+1);play()});
+  thumbs.forEach((button,i)=>button.addEventListener('click',()=>{select(i);play()}));
+  dots.forEach((button,i)=>button.addEventListener('click',()=>{select(i);play()}));
+  carousel.addEventListener('mouseenter',stop);
+  carousel.addEventListener('mouseleave',play);
+  carousel.addEventListener('focusin',stop);
+  carousel.addEventListener('focusout',e=>{if(!carousel.contains(e.relatedTarget))play()});
+  carousel.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'){e.preventDefault();select(selected+1);stop()}
+    if(e.key==='ArrowLeft'){e.preventDefault();select(selected-1);stop()}
+  });
+  carousel.addEventListener('touchstart',e=>{pointerStart=e.changedTouches[0]?.clientX??null},{passive:true});
+  carousel.addEventListener('touchend',e=>{
+    if(pointerStart===null)return;
+    const delta=(e.changedTouches[0]?.clientX??pointerStart)-pointerStart;
+    pointerStart=null;
+    if(Math.abs(delta)>65){select(selected+(delta<0?1:-1));play()}
+  },{passive:true});
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():play());
+  select(0);
+  play();
+})();

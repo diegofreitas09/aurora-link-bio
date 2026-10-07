@@ -39,17 +39,60 @@
           <span class="section-kicker">NOSSO MURAL</span>
           <h1>Momentos que fazem parte da nossa história.</h1>
           <p>Registros de vivências, descobertas e muito afeto no dia a dia da Creche Escola Aurora.</p>
+          <div class="mural-highlights" aria-label="Nosso jeito de educar">
+            <span><i class="mural-highlight-icon pink">♥</i> Infância com sentido</span>
+            <span><i class="mural-highlight-icon yellow">✦</i> Convivências que inspiram</span>
+            <span><i class="mural-highlight-icon green">❀</i> Aprendizado na prática</span>
+            <span><i class="mural-highlight-icon purple">★</i> Memórias para a vida</span>
+          </div>
         </div>
-        <figure class="mural-hero-photo reveal" data-delay="100">
-          <img src="assets/mural/aurora-ambiente.png" alt="Ambiente pedagógico e experiências na Creche Escola Aurora">
-          <figcaption>
-            <span class="mural-photo-icon">🌈</span>
-            <div>
-              <strong>Viver o Aurora</strong>
-              <small>Ambientes · experiências · vínculos</small>
-            </div>
-          </figcaption>
-        </figure>
+
+        <div class="mural-carousel reveal" data-delay="100" data-mural-carousel aria-label="Carrossel de fotos da Creche Escola Aurora">
+          <div class="mural-carousel-frame">
+            <button class="mural-carousel-prev" type="button" aria-label="Ver foto anterior">‹</button>
+            <button class="mural-carousel-image" type="button" data-lightbox-image="assets/mural/aurora-contacao-historias.webp" aria-label="Ampliar a fotografia em destaque">
+              <img src="assets/mural/aurora-contacao-historias.webp" alt="Contação de histórias com crianças e pessoas idosas no jardim do Aurora" data-carousel-image fetchpriority="high">
+              <span class="mural-carousel-caption"><strong data-carousel-title>Viver o Aurora</strong><small data-carousel-description>Ambientes · experiências · vínculos</small></span>
+            </button>
+            <button class="mural-carousel-next" type="button" aria-label="Ver próxima foto">›</button>
+          </div>
+          <div class="mural-carousel-dots" role="group" aria-label="Selecionar foto">
+            <button class="is-active" type="button" aria-label="Foto 1 de 4" aria-current="true"></button>
+            <button type="button" aria-label="Foto 2 de 4"></button>
+            <button type="button" aria-label="Foto 3 de 4"></button>
+            <button type="button" aria-label="Foto 4 de 4"></button>
+          </div>
+        </div>
+      </div>
+      <div class="mural-carousel-thumbnails" role="group" aria-label="Miniaturas do mural">
+        <button type="button" class="mural-carousel-thumb is-active" aria-pressed="true"
+          data-src="assets/mural/aurora-contacao-historias.webp"
+          data-title="Viver o Aurora" data-description="Ambientes · experiências · vínculos"
+          data-alt="Contação de histórias com crianças e pessoas idosas no jardim do Aurora">
+          <img src="assets/mural/aurora-contacao-historias.webp" alt="" loading="lazy">
+          <span><strong>Viver o Aurora</strong><small>Afeto · leitura · convivência</small></span>
+        </button>
+        <button type="button" class="mural-carousel-thumb" aria-pressed="false"
+          data-src="assets/mural/aurora-ambiente.png"
+          data-title="Arte e imaginação" data-description="Criar · explorar · se expressar"
+          data-alt="Ambiente preparado para experiências e descobertas no Aurora">
+          <img src="assets/mural/aurora-ambiente.png" alt="" loading="lazy">
+          <span><strong>Arte e imaginação</strong><small>Criar · explorar · se expressar</small></span>
+        </button>
+        <button type="button" class="mural-carousel-thumb" aria-pressed="false"
+          data-src="assets/mural/aurora-sensorial.png"
+          data-title="Descobrir com os sentidos" data-description="Brincar · experimentar · aprender"
+          data-alt="Atividade sensorial na Creche Escola Aurora">
+          <img src="assets/mural/aurora-sensorial.png" alt="" loading="lazy">
+          <span><strong>Descobrir com os sentidos</strong><small>Brincar · experimentar · aprender</small></span>
+        </button>
+        <button type="button" class="mural-carousel-thumb" aria-pressed="false"
+          data-src="assets/mural/aurora-fachada-hero.webp"
+          data-title="Um espaço para acolher" data-description="Cuidado · segurança · pertencimento"
+          data-alt="Fachada e entrada da Creche Escola Aurora">
+          <img src="assets/mural/aurora-fachada-hero.webp" alt="" loading="lazy">
+          <span><strong>Um espaço para acolher</strong><small>Conheça a nossa escola</small></span>
+        </button>
       </div>
     </section>
 

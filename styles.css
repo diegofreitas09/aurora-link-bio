@@ -1448,3 +1448,41 @@ body{background:#fff;color:var(--ink)}
 .experience-card.large h3{color:#7251bf;font-size:clamp(27px,3vw,40px);line-height:1.12;margin-top:14px}
 .experience-card.large p{margin-top:11px}
 @media(max-width:700px){.experience-photo{height:255px}.experience-card.large{min-height:unset}.experience-card.large>span,.experience-card.large>h3,.experience-card.large>p{margin-left:5px;margin-right:5px}}
+
+
+/* Mural Aurora — vitrine com carrossel e miniaturas (2026) */
+.mural-hero{padding-top:145px;padding-bottom:75px;background:radial-gradient(circle at 80% 25%,#edf8ff 0,transparent 36%),linear-gradient(145deg,#fff 2%,#f8f2ff 65%,#f2fff9 100%)}
+.mural-hero-shell{max-width:1320px;grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);gap:55px}
+.mural-hero h1{color:#1758bb}
+.mural-carousel{width:100%;min-width:0}
+.mural-carousel-frame{position:relative;border:12px solid #fff;border-radius:38px;background:#fff;box-shadow:0 24px 65px rgba(76,75,133,.12)}
+.mural-carousel-image{width:100%;height:440px;display:block;border:0;padding:0;position:relative;overflow:hidden;text-align:left;border-radius:27px;background:#f4f0fc;cursor:zoom-in}
+.mural-carousel-image>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 45%;transition:opacity .2s ease}
+.mural-carousel-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 56%,rgba(20,22,42,.64));pointer-events:none}
+.mural-carousel-caption{position:absolute;left:30px;right:18px;bottom:24px;display:flex;flex-direction:column;gap:4px;z-index:1;color:#fff;text-shadow:0 2px 9px #0006}
+.mural-carousel-caption strong{font:800 32px/1.1 "Baloo 2",sans-serif}
+.mural-carousel-caption small{font:800 13px/1.4 "Nunito",sans-serif;letter-spacing:.02em}
+.mural-carousel-prev,.mural-carousel-next{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:52px;height:52px;border:0;border-radius:50%;background:#fff;color:#8366ce;box-shadow:0 8px 22px #0002;font-size:42px;line-height:40px;cursor:pointer;display:grid;place-items:center;transition:transform .18s,background .18s}
+.mural-carousel-prev{left:-24px}.mural-carousel-next{right:-24px}
+.mural-carousel-prev:hover,.mural-carousel-next:hover{transform:translateY(-50%) scale(1.09);background:#f3ebff}
+.mural-carousel-dots{display:flex;gap:9px;align-items:center;justify-content:center;margin:13px 0 0}
+.mural-carousel-dots button{height:12px;width:12px;border-radius:50%;background:#d9d4e5;border:0;padding:0;cursor:pointer;transition:background .2s,transform .2s}
+.mural-carousel-dots button.is-active{background:#8159cb;transform:scale(1.15)}
+.mural-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;margin-top:32px}
+.mural-highlights>span{display:flex;gap:9px;align-items:center;color:#656b81;font-size:12px;font-weight:900;line-height:1.35}
+.mural-highlight-icon{width:36px;height:36px;flex:none;display:grid;place-items:center;border-radius:50%;font-size:20px;font-style:normal}
+.mural-highlight-icon.pink{color:#de5780;background:#ffe4ea}.mural-highlight-icon.yellow{color:#d79913;background:#fff3ca}.mural-highlight-icon.green{color:#159a70;background:#def8e9}.mural-highlight-icon.purple{color:#7e61bd;background:#ece5ff}
+.mural-carousel-thumbnails{max-width:1320px;margin:28px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.mural-carousel-thumb{min-width:0;border:2px solid #fff;border-radius:25px;background:#fff;padding:7px 7px 15px;text-align:left;cursor:pointer;box-shadow:0 12px 30px rgba(109,98,154,.08);transition:transform .2s,border-color .2s,box-shadow .2s}
+.mural-carousel-thumb:nth-child(1){background:#f2eaff}.mural-carousel-thumb:nth-child(2){background:#fff0f3}.mural-carousel-thumb:nth-child(3){background:#eafaf1}.mural-carousel-thumb:nth-child(4){background:#fff5df}
+.mural-carousel-thumb.is-active{border-color:#9876dd;box-shadow:0 13px 29px #805bc529}
+.mural-carousel-thumb:hover{transform:translateY(-4px)}
+.mural-carousel-thumb img{width:100%;height:145px;display:block;object-fit:cover;border-radius:18px;background:#e6dff4}
+.mural-carousel-thumb span{display:flex;flex-direction:column;gap:2px;padding:11px 9px 0}
+.mural-carousel-thumb strong{font:800 18px/1.1 "Baloo 2",sans-serif;color:#6b4db1}
+.mural-carousel-thumb:nth-child(3) strong{color:#16866b}.mural-carousel-thumb:nth-child(4) strong{color:#a56f13}
+.mural-carousel-thumb small{font:800 11px/1.35 "Nunito",sans-serif;color:#6a7187}
+.mural-carousel button:focus-visible,.mural-carousel-thumb:focus-visible{outline:3px solid #7650c8;outline-offset:4px}
+@media(max-width:950px){.mural-hero-shell{grid-template-columns:1fr;gap:30px}.mural-hero{padding-top:120px}.mural-carousel-image{height:clamp(320px,55vw,490px)}.mural-highlights{margin-top:20px}.mural-carousel-thumbnails{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.mural-hero{padding:118px 18px 46px}.mural-hero h1{font-size:clamp(40px,11vw,56px)}.mural-carousel-frame{border-width:7px;border-radius:27px}.mural-carousel-image{height:310px;border-radius:21px}.mural-carousel-prev,.mural-carousel-next{width:40px;height:40px;font-size:30px}.mural-carousel-prev{left:-8px}.mural-carousel-next{right:-8px}.mural-carousel-caption{left:19px;bottom:18px}.mural-carousel-caption strong{font-size:23px}.mural-carousel-caption small{font-size:11px}.mural-carousel-thumbnails{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 3px 14px;margin-top:22px;scrollbar-width:thin}.mural-carousel-thumb{flex:0 0 68%;scroll-snap-align:start}.mural-carousel-thumb img{height:130px}.mural-highlights{gap:10px}.mural-highlights>span{font-size:10px}.mural-highlight-icon{width:31px;height:31px;font-size:17px}}
+@media(prefers-reduced-motion:reduce){.mural-carousel-thumb,.mural-carousel-prev,.mural-carousel-next,.mural-carousel-image>img{transition:none}}
