@@ -503,9 +503,9 @@ body{background:#fff;color:var(--ink)}
 }
 
 /* Fachada no hero */
-.hero-facade-card{position:relative;display:block;width:100%;overflow:hidden;border-radius:34px;background:#fff;box-shadow:0 24px 60px rgba(70,67,99,.16);border:1px solid rgba(143,115,200,.12);text-decoration:none;transform:rotate(.35deg);transition:transform .22s ease,box-shadow .22s ease}
-.hero-facade-card:hover{transform:rotate(0) translateY(-4px);box-shadow:0 30px 70px rgba(70,67,99,.21)}
-.hero-facade-card img{display:block;width:100%;aspect-ratio:16/7.15;object-fit:cover;object-position:center center}
+.hero-facade-card{position:relative;display:block;width:100%;overflow:hidden;border-radius:34px;background:#fff;box-shadow:0 24px 60px rgba(70,67,99,.16);border:1px solid rgba(143,115,200,.12);text-decoration:none;transition:transform .22s ease,box-shadow .22s ease}
+.hero-facade-card:hover{transform:translateY(-4px);box-shadow:0 30px 70px rgba(70,67,99,.21)}
+.hero-facade-card img{display:block;width:100%;aspect-ratio:16/7.15;object-fit:cover;object-position:center center;image-rendering:auto;filter:saturate(1.03) contrast(1.02)}
 .hero-facade-badge{position:absolute;top:16px;left:16px;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);color:#555b72;font-size:12px;font-weight:900;box-shadow:0 8px 18px rgba(40,42,60,.12)}
 .hero-facade-caption{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 26px;background:linear-gradient(135deg,#fff,#faf7ff)}
 .hero-facade-caption div{display:grid;gap:4px}
@@ -522,6 +522,6 @@ body{background:#fff;color:var(--ink)}
   .hero-facade-badge{top:18px;left:18px;padding:10px 14px;font-size:12px}
 }
 @media(min-width:1280px){
-  .hero-facade-card{transform:scale(1.035) rotate(.25deg);transform-origin:center}
-  .hero-facade-card:hover{transform:scale(1.035) rotate(0) translateY(-4px)}
+  .hero-facade-card{transform:none}
+  .hero-facade-card:hover{transform:translateY(-4px)}
 }
