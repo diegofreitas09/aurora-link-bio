@@ -391,3 +391,49 @@ body{background:#fff;color:var(--ink)}
   .brand-logo{width:132px;max-height:56px}
   .footer-brand-logo{width:180px;max-height:98px}
 }
+
+/* Aurorinha — atalho oficial do WhatsApp */
+.floating-wa{display:none!important}
+.aurora-whatsapp-mascot{
+  position:fixed;
+  right:16px;
+  bottom:14px;
+  z-index:70;
+  width:112px;
+  display:block;
+  line-height:0;
+  filter:drop-shadow(0 14px 22px rgba(47,43,68,.18));
+  transition:transform .22s ease,filter .22s ease;
+  animation:aurorinhaFloat 3.4s ease-in-out infinite;
+}
+.aurora-whatsapp-mascot img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.aurora-whatsapp-mascot:hover{
+  transform:translateY(-5px) scale(1.035);
+  filter:drop-shadow(0 17px 26px rgba(47,43,68,.24));
+}
+.aurora-whatsapp-mascot:focus-visible{
+  outline:3px solid rgba(143,115,200,.35);
+  outline-offset:6px;
+  border-radius:24px;
+}
+@keyframes aurorinhaFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+}
+@media(max-width:768px){
+  .aurora-whatsapp-mascot{
+    width:82px;
+    right:8px;
+    bottom:12px;
+  }
+  body:has(.mobile-visit-cta) .aurora-whatsapp-mascot{
+    bottom:76px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .aurora-whatsapp-mascot{animation:none}
+}
