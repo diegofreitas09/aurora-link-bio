@@ -12,5 +12,5 @@
 
 [[redirects]]
   from = "/bio"
-  to = "/"
-  status = 301
+  to = "/bio.html"
+  status = 200
