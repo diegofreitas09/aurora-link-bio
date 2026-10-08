@@ -1,0 +1,53 @@
+name: Importar fotos reais do mural
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fotos-reais-mural-aurora (2).zip'
+      - '.github/workflows/importar-fotos-mural.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Extrair as seis fotos reais
+        run: |
+          python3 - <<'PY'
+          import zipfile
+          from pathlib import Path
+          archive=Path("fotos-reais-mural-aurora (2).zip")
+          names={
+            "aurora-vista-aerea.webp",
+            "aurora-ao-ar-livre.webp",
+            "aurora-hora-do-lanche.webp",
+            "aurora-vivencias-em-grupo.webp",
+            "aurora-amizades-balanco.webp",
+            "aurora-primeiros-passos-real.webp",
+          }
+          target=Path("assets/mural")
+          target.mkdir(parents=True,exist_ok=True)
+          with zipfile.ZipFile(archive) as z:
+            files={Path(n).name:n for n in z.namelist() if not n.endswith("/") and Path(n).name in names}
+            if set(files)!=names:
+              raise RuntimeError("Faltam fotos: "+repr(names-set(files)))
+            for name in sorted(names):
+              data=z.read(files[name])
+              if len(data)<1000 or data[:4]!=b"RIFF" or data[8:12]!=b"WEBP":
+                raise RuntimeError("Formato de imagem inválido: "+name)
+              (target/name).write_bytes(data)
+              print("OK",name,len(data))
+          PY
+      - name: Salvar fotos no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/mural/aurora-*.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Adicionar seis fotos reais ao mural Aurora"
+            git push
+          fi
