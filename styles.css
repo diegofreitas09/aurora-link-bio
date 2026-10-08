@@ -1528,3 +1528,5 @@ body.mural-body .mural-carousel-thumb img{height:138px;object-fit:cover}
 body.mural-body .mural-carousel-image>img{object-fit:contain;object-position:center;background:#f0edf7}
 @media(max-width:1130px){body.mural-body .mural-carousel-thumbnails{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
 @media(max-width:720px){body.mural-body .mural-carousel-thumbnails{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}body.mural-body .mural-carousel-thumb img{height:134px}}
+
+@supports (content-visibility:auto){main > .section{content-visibility:auto;contain-intrinsic-size:900px}}
