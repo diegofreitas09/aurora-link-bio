@@ -16,10 +16,15 @@
   status = 200
 
 
-# Link da bio: o subdomínio abre diretamente a página de links
+# Link da bio: reescreve somente a raiz do subdomínio para a página de links
 [[redirects]]
-  from = "/"
+  from = "https://bio.crecheescolaaurora.com.br/"
   to = "/bio.html"
   status = 200
   force = true
-  conditions = {Host = ["bio.crecheescolaaurora.com.br"]}
+
+[[redirects]]
+  from = "http://bio.crecheescolaaurora.com.br/"
+  to = "/bio.html"
+  status = 200
+  force = true
