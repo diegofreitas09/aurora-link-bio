@@ -28,3 +28,17 @@
   to = "/bio.html"
   status = 200
   force = true
+
+
+# SEO: entrega o sitemap explicitamente como XML para mecanismos de busca
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=UTF-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=UTF-8"
+    Cache-Control = "public, max-age=3600"
