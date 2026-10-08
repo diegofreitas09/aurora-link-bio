@@ -1520,3 +1520,11 @@ body.mural-body .mural-carousel-image{background:#f3edfb}
 body.mural-body .mural-carousel-thumb img{object-fit:cover}
 @media(max-width:950px){body.mural-body .mural-page .mural-hero{padding-top:20px!important}}
 @media(max-width:560px){body.mural-body .site-header{padding:8px 12px}body.mural-body .mural-page .mural-hero{padding-top:16px!important}}
+
+/* Mural Aurora: apresentação das sete fotos reais, preservando miniaturas e nitidez */
+body.mural-body .mural-carousel-thumbnails{display:grid!important;grid-template-columns:repeat(7,minmax(0,1fr))!important;max-width:1370px;gap:12px!important}
+body.mural-body .mural-carousel-thumb{padding:6px!important}
+body.mural-body .mural-carousel-thumb img{height:138px;object-fit:cover}
+body.mural-body .mural-carousel-image>img{object-fit:contain;object-position:center;background:#f0edf7}
+@media(max-width:1130px){body.mural-body .mural-carousel-thumbnails{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+@media(max-width:720px){body.mural-body .mural-carousel-thumbnails{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}body.mural-body .mural-carousel-thumb img{height:134px}}
