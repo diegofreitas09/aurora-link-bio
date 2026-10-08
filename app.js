@@ -172,7 +172,7 @@ fetch('assets/mascote.b64?v=2')
 /* Se uma foto estiver indisponível, mostrar uma foto válida do próprio mural. */
 (() => {
   const fallback='assets/mural/aurora-contacao-historias.webp';
-  const fallback2='assets/mural/aurora-ambiente.png';
+  const fallback2='assets/mural/aurora-vivencias-em-grupo.webp';
   document.querySelectorAll('.mural-carousel-image img,.mural-carousel-thumb img,.mural-photo img').forEach(img=>{
     img.addEventListener('error',()=>{
       const failed=img.getAttribute('src')||'';
