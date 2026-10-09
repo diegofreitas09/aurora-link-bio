@@ -1709,3 +1709,81 @@ body.mural-body .mural-carousel-image>img{object-fit:contain;object-position:cen
     margin:10px auto 0;
   }
 }
+
+
+/* Estrutura — hero refinado e mascotes corrigidos */
+.structure-hero-art{
+  min-height:360px;
+  border-radius:38px;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:34px 34px 56px;
+  background:
+    radial-gradient(circle at 20% 18%,rgba(255,255,255,.95) 0 42px,transparent 43px),
+    linear-gradient(145deg,#f2ebff 0%,#e8f7ff 52%,#fff3d9 100%);
+}
+.structure-hero-art::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  right:-46px;
+  bottom:-54px;
+  background:rgba(255,219,112,.28);
+}
+.structure-hero-art::after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  left:-28px;
+  top:-30px;
+  background:rgba(127,206,201,.24);
+}
+.structure-hero-art .inner-rainbow-icon{
+  position:absolute;
+  top:30px;
+  left:34px;
+  width:58px;
+  height:58px;
+  z-index:3;
+}
+.structure-hero-art .structure-hero-mascots{
+  position:relative;
+  z-index:2;
+  width:min(310px,72%);
+  max-width:310px;
+  max-height:270px;
+  object-fit:contain;
+  filter:drop-shadow(0 18px 20px rgba(58,69,110,.15));
+  animation:floaty 4s ease-in-out infinite;
+}
+.structure-hero-badge{
+  position:absolute;
+  left:50%;
+  bottom:22px;
+  transform:translateX(-50%);
+  z-index:3;
+  white-space:nowrap;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(130,105,190,.13);
+  border-radius:999px;
+  padding:10px 16px;
+  color:#5d4f84;
+  font:800 13px/1.2 "Nunito",sans-serif;
+  box-shadow:0 10px 28px rgba(70,66,108,.09);
+}
+.structure-hero-art .inner-star.one{right:34px;top:42px}
+.structure-hero-art .inner-star.two{left:34px;bottom:44px}
+@media(max-width:980px){
+  .structure-hero-art{min-height:330px;max-width:520px;padding:28px 26px 52px}
+}
+@media(max-width:640px){
+  .structure-hero-art{min-height:290px;border-radius:30px;padding:24px 20px 48px}
+  .structure-hero-art .structure-hero-mascots{width:min(250px,78%);max-height:220px}
+  .structure-hero-art .inner-rainbow-icon{width:46px;height:46px;top:22px;left:24px}
+  .structure-hero-badge{font-size:11px;padding:9px 12px;white-space:normal;width:max-content;max-width:78%;text-align:center}
+}
