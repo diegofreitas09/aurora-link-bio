@@ -196,6 +196,8 @@ fetch('assets/mascote.b64?v=2')
   const mainButton=carousel.querySelector('.structure-main-image');
   const thumbs=[...carousel.querySelectorAll('.structure-thumb')];
   const current=carousel.querySelector('[data-structure-current]');
+  const stage=carousel.querySelector('.structure-stage');
+  const backdrop=carousel.querySelector('[data-structure-backdrop]');
   const prev=carousel.querySelector('.structure-prev');
   const next=carousel.querySelector('.structure-next');
   if(!main||!mainButton||!thumbs.length)return;
@@ -216,6 +218,11 @@ fetch('assets/mascote.b64?v=2')
       main.src=src;
       main.alt='Estrutura da Creche Escola Aurora — foto '+(selected+1);
       mainButton.dataset.lightboxImage=src;
+      if(backdrop)backdrop.style.backgroundImage='url("'+src.replace(/"/g,'\\\"')+'")';
+      if(stage){
+        stage.classList.toggle('is-landscape',preload.naturalWidth>=preload.naturalHeight*1.18);
+        stage.classList.toggle('is-portrait',preload.naturalHeight>preload.naturalWidth);
+      }
       main.style.opacity='1';
     };
     preload.onerror=()=>{main.style.opacity='1'};
