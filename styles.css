@@ -1566,3 +1566,78 @@ body.mural-body .mural-carousel-image>img{object-fit:contain;object-position:cen
   .structure-thumb img{border-radius:10px}
 }
 @media(prefers-reduced-motion:reduce){.structure-main-image img,.structure-thumb,.structure-prev,.structure-next{transition:none}}
+
+
+/* Refinamento visual do carrossel da Estrutura */
+.structure-stage{
+  isolation:isolate;
+  min-height:620px;
+  display:grid;
+  place-items:center;
+  background:#edf1f7;
+}
+.structure-backdrop{
+  position:absolute;
+  inset:-28px;
+  z-index:0;
+  background-position:center;
+  background-size:cover;
+  filter:blur(26px) saturate(.9);
+  opacity:.42;
+  transform:scale(1.08);
+  transition:background-image .25s ease,opacity .25s ease;
+}
+.structure-stage::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(90deg,rgba(244,246,251,.72),rgba(255,255,255,.16) 34%,rgba(255,255,255,.16) 66%,rgba(244,246,251,.72));
+  pointer-events:none;
+}
+.structure-main-image{
+  position:relative;
+  z-index:2;
+  height:620px;
+  width:100%;
+  display:grid;
+  place-items:center;
+  background:transparent;
+}
+.structure-main-image img{
+  width:auto;
+  max-width:100%;
+  height:100%;
+  object-fit:contain;
+  border-radius:0;
+  box-shadow:0 18px 48px rgba(32,43,73,.18);
+}
+.structure-stage.is-landscape .structure-main-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  box-shadow:none;
+}
+.structure-prev,.structure-next,.structure-counter{z-index:4}
+.structure-thumbs{
+  margin-top:8px;
+  padding:16px 4px 10px;
+  gap:10px;
+}
+.structure-thumb{
+  flex:0 0 116px;
+  height:78px;
+  border-radius:16px;
+}
+.structure-thumb img{border-radius:10px}
+@media(max-width:900px){
+  .structure-stage{min-height:500px}
+  .structure-main-image{height:500px}
+}
+@media(max-width:640px){
+  .structure-stage{min-height:390px}
+  .structure-main-image{height:390px}
+  .structure-backdrop{filter:blur(18px);opacity:.34}
+  .structure-stage::after{background:linear-gradient(90deg,rgba(244,246,251,.45),rgba(255,255,255,.08),rgba(244,246,251,.45))}
+  .structure-thumb{flex-basis:92px;height:68px}
+}
