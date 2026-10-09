@@ -186,3 +186,73 @@ fetch('assets/mascote.b64?v=2')
     observer.observe(featured,{attributes:true,attributeFilter:['src']});
   }
 })();
+
+
+/* Nossa Estrutura: carrossel responsivo com miniaturas, setas, swipe e autoplay. */
+(() => {
+  const carousel=document.querySelector('[data-structure-carousel]');
+  if(!carousel)return;
+  const main=carousel.querySelector('[data-structure-image]');
+  const mainButton=carousel.querySelector('.structure-main-image');
+  const thumbs=[...carousel.querySelectorAll('.structure-thumb')];
+  const current=carousel.querySelector('[data-structure-current]');
+  const prev=carousel.querySelector('.structure-prev');
+  const next=carousel.querySelector('.structure-next');
+  if(!main||!mainButton||!thumbs.length)return;
+
+  let selected=0;
+  let timer=null;
+  let touchStart=null;
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const choose=i=>{
+    selected=(i+thumbs.length)%thumbs.length;
+    const item=thumbs[selected];
+    const src=item.dataset.structureSrc;
+    if(!src)return;
+    main.style.opacity='0';
+    const preload=new Image();
+    preload.onload=()=>{
+      main.src=src;
+      main.alt='Estrutura da Creche Escola Aurora — foto '+(selected+1);
+      mainButton.dataset.lightboxImage=src;
+      main.style.opacity='1';
+    };
+    preload.onerror=()=>{main.style.opacity='1'};
+    preload.src=src;
+    thumbs.forEach((t,n)=>{
+      t.classList.toggle('is-active',n===selected);
+      t.setAttribute('aria-pressed',String(n===selected));
+    });
+    item.scrollIntoView({behavior:reduced?'auto':'smooth',block:'nearest',inline:'center'});
+    if(current)current.textContent=String(selected+1);
+  };
+
+  const stop=()=>{if(timer!==null){clearInterval(timer);timer=null}};
+  const play=()=>{stop();if(!reduced&&!document.hidden)timer=setInterval(()=>choose(selected+1),6000)};
+
+  prev?.addEventListener('click',()=>{choose(selected-1);play()});
+  next?.addEventListener('click',()=>{choose(selected+1);play()});
+  thumbs.forEach((t,i)=>t.addEventListener('click',()=>{choose(i);play()}));
+
+  carousel.addEventListener('mouseenter',stop);
+  carousel.addEventListener('mouseleave',play);
+  carousel.addEventListener('focusin',stop);
+  carousel.addEventListener('focusout',e=>{if(!carousel.contains(e.relatedTarget))play()});
+  carousel.addEventListener('keydown',e=>{
+    if(e.key==='ArrowLeft'){e.preventDefault();choose(selected-1);play()}
+    if(e.key==='ArrowRight'){e.preventDefault();choose(selected+1);play()}
+  });
+  carousel.addEventListener('touchstart',e=>{touchStart=e.changedTouches[0]?.clientX??null},{passive:true});
+  carousel.addEventListener('touchend',e=>{
+    if(touchStart===null)return;
+    const end=e.changedTouches[0]?.clientX??touchStart;
+    const delta=end-touchStart;
+    touchStart=null;
+    if(Math.abs(delta)>55){choose(selected+(delta<0?1:-1));play()}
+  },{passive:true});
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():play());
+
+  choose(0);
+  play();
+})();
