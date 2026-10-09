@@ -1641,3 +1641,38 @@ body.mural-body .mural-carousel-image>img{object-fit:contain;object-position:cen
   .structure-stage::after{background:linear-gradient(90deg,rgba(244,246,251,.45),rgba(255,255,255,.08),rgba(244,246,251,.45))}
   .structure-thumb{flex-basis:92px;height:68px}
 }
+
+
+/* Ajuste fino do carrossel da Estrutura: foto inteira e quadro mais compacto */
+.structure-stage{
+  min-height:0;
+  height:clamp(430px,38vw,520px);
+  max-height:520px;
+}
+.structure-main-image{
+  height:100%;
+  padding:14px 76px;
+  box-sizing:border-box;
+}
+.structure-main-image img,
+.structure-stage.is-landscape .structure-main-image img,
+.structure-stage.is-portrait .structure-main-image img{
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  border-radius:22px;
+  box-shadow:0 16px 38px rgba(32,43,73,.16);
+}
+@media(max-width:900px){
+  .structure-stage{height:460px;max-height:460px}
+  .structure-main-image{padding:12px 58px}
+}
+@media(max-width:640px){
+  .structure-stage{height:340px;max-height:340px}
+  .structure-main-image{padding:10px 44px}
+  .structure-main-image img,
+  .structure-stage.is-landscape .structure-main-image img,
+  .structure-stage.is-portrait .structure-main-image img{border-radius:16px}
+}
