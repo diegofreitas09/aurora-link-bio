@@ -1676,3 +1676,36 @@ body.mural-body .mural-carousel-image>img{object-fit:contain;object-position:cen
   .structure-stage.is-landscape .structure-main-image img,
   .structure-stage.is-portrait .structure-main-image img{border-radius:16px}
 }
+
+
+/* Estrutura — proporção final mais elegante no desktop */
+@media(min-width:901px){
+  .structure-gallery-shell{max-width:1080px}
+  .structure-stage{
+    height:420px;
+    max-height:420px;
+    border-width:8px;
+    border-radius:30px;
+  }
+  .structure-main-image{
+    padding:18px 96px;
+  }
+  .structure-main-image img,
+  .structure-stage.is-landscape .structure-main-image img,
+  .structure-stage.is-portrait .structure-main-image img{
+    max-width:880px;
+    max-height:384px;
+  }
+  .structure-stage.is-portrait .structure-main-image img{
+    max-width:620px;
+  }
+  .structure-prev,.structure-next{
+    width:48px;
+    height:48px;
+    font-size:34px;
+  }
+  .structure-thumbs{
+    max-width:980px;
+    margin:10px auto 0;
+  }
+}
