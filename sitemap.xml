@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://crecheescolaaurora.com.br/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://crecheescolaaurora.com.br/</loc><image:image><image:loc>https://crecheescolaaurora.com.br/assets/mural/aurora-fachada-hero.webp</image:loc></image:image></url>
   <url><loc>https://crecheescolaaurora.com.br/escola.html</loc></url>
   <url><loc>https://crecheescolaaurora.com.br/proposta.html</loc></url>
   <url><loc>https://crecheescolaaurora.com.br/estrutura.html</loc></url>
