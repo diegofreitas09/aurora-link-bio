@@ -1,0 +1,38 @@
+/* Ícones institucionais — Aurora / Outubro 2026
+   Vetores consistentes em vez de emojis variáveis entre celulares. */
+.aurora-icon-sprite{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.aurora-ui-icon{display:block;width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round}
+.trust-shell>div{gap:14px}
+.trust-shell>div>span.aurora-trust-icon{display:grid;place-items:center;flex:none;width:46px;height:46px;border:1px solid transparent;border-radius:15px;font-size:inherit;box-shadow:0 3px 12px rgba(72,88,119,.045)}
+.aurora-trust-icon .aurora-ui-icon{width:24px;height:24px}
+.aurora-trust-icon--location{color:#3767ac;background:#eaf2fd;border-color:#dbe8f9!important}
+.aurora-trust-icon--message{color:#7960ba;background:#f1ebfa;border-color:#e6ddf5!important}
+.aurora-trust-icon--family{color:#267f78;background:#e7f6f1;border-color:#d4ede4!important}
+.trust-shell p{min-width:0;gap:3px}
+.trust-shell strong{line-height:1.25}
+.trust-shell small{line-height:1.35}
+.hero-location-tag,.hero-facade-badge{display:inline-flex!important;align-items:center;gap:7px}
+.hero-location-tag .aurora-ui-icon{width:17px;height:17px;color:#3972b4}
+.hero-facade-badge .aurora-ui-icon{width:17px;height:17px}
+.hero-tags span.aurora-hero-chip{display:inline-flex;align-items:center;gap:7px}
+.aurora-hero-chip .aurora-ui-icon{width:17px;height:17px;color:#8d75c9}
+.aurora-hero-chip:nth-child(3) .aurora-ui-icon{color:#298b80}
+.caption-icon .aurora-ui-icon{width:25px;height:25px}
+.caption-icon.lilac .aurora-ui-icon{color:#8f72cb}
+.caption-icon.blue .aurora-ui-icon{color:#388cae}
+.caption-icon.yellow .aurora-ui-icon{color:#c28a30}
+.form-heading>span.aurora-form-icon{display:grid;place-items:center;background:#f2ecfb}
+.aurora-form-icon img{display:block;width:30px;height:30px;object-fit:contain}
+.family-photo-card figcaption .aurora-family-icon{display:inline-grid;place-items:center;color:#f0a1b0;flex:none}
+.aurora-family-icon .aurora-ui-icon{width:27px;height:27px;stroke-width:2.2}
+.pin .aurora-map-icon{display:grid;place-items:center;color:#8068bf}
+.pin .aurora-map-icon .aurora-ui-icon{width:27px;height:27px}
+.mobile-visit-cta>span.aurora-cta-icon{grid-row:1/3;display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.18);font-size:inherit}
+.mobile-visit-cta .aurora-cta-icon img{display:block;width:30px;height:30px;object-fit:contain}
+@media(max-width:640px){
+  .trust-shell>div{padding:9px 11px;gap:13px}
+  .trust-shell>div>span.aurora-trust-icon{width:45px;height:45px;border-radius:14px}
+  .trust-shell strong{font-size:14px}
+  .trust-shell small{font-size:11.5px}
+  .mobile-visit-cta{grid-template-columns:38px 1fr;column-gap:10px}
+}
